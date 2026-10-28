@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>We Buy Land for Cash | SGRE Solutions</title>
+  <meta name="description" content="Sell your vacant land fast for a fair cash offer. No fees, no agents, close on your timeline. SGRE Solutions buys land as-is." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1a14;
+      --bg-soft: #16241c;
+      --card: #1c2e24;
+      --line: rgba(255,255,255,0.08);
+      --text: #f4f7f5;
+      --muted: #a8b7ae;
+      --accent: #3ecf8e;
+      --accent-dark: #2aa86f;
+      --gold: #e8c547;
+      --white: #fff;
+      --radius: 16px;
+      --shadow: 0 20px 50px rgba(0,0,0,0.35);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(180deg, rgba(10,18,14,.55) 0%, rgba(10,18,14,.72) 45%, rgba(10,18,14,.88) 100%),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80")
+          center / cover no-repeat fixed;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(62,207,142,.12), transparent 45%),
+        radial-gradient(ellipse at 85% 10%, rgba(232,197,71,.08), transparent 40%);
+      pointer-events: none;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .8rem; font-weight: 600; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .eyebrow .dot {
+      width: .45rem; height: .45rem; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 0 4px rgba(62,207,142,.2);
+    }
+    h1, h2, h3 { line-height: 1.15; font-weight: 700; }
+    h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 400; letter-spacing: -0.02em;
+    }
+    h2 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      font-weight: 400; letter-spacing: -0.02em;
+    }
+    h3 { font-size: 1.15rem; }
+    .muted { color: var(--muted); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      background: var(--accent); color: #062016; font-weight: 700;
+      padding: .9rem 1.35rem; border-radius: 999px; border: none;
+      cursor: pointer; transition: .2s ease; font-size: 1rem;
+    }
+    .btn:hover { background: #55dba0; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--line);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.05); transform: none; }
+    .pill {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(62,207,142,.12); color: var(--accent);
+      border: 1px solid rgba(62,207,142,.25);
+      padding: .35rem .7rem; border-radius: 999px; font-size: .85rem; font-weight: 600;
+    }
+
+    /* Nav */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(10,18,14,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .9rem 0; gap: 1rem;
+    }
+    .logo {
+      display: flex; align-items: center; gap: .65rem; font-weight: 700;
+    }
+    .logo-mark {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(145deg, var(--accent), #1a7a52);
+      display: grid; place-items: center; color: #062016; font-weight: 800;
+    }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; color: var(--muted); font-size: .95rem; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: none; }
+    @media (min-width: 800px) {
+      .nav-cta { display: inline-flex; }
+      .nav-links { display: flex; }
+    }
+    @media (max-width: 799px) {
+      .nav-links { display: none; }
+      .nav-cta { display: inline-flex; padding: .65rem 1rem; font-size: .9rem; }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative; padding: 3.5rem 0 4rem; overflow: hidden;
+    }
+    .hero {
+      background:
+        linear-gradient(105deg, rgba(10,18,14,.78) 0%, rgba(10,18,14,.55) 48%, rgba(10,18,14,.35) 100%),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80")
+          center 40% / cover no-repeat;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero::before { display: none; }
+    .hero-grid {
+      position: relative;
+      display: grid; gap: 2.5rem; align-items: start;
+    }
+    @media (min-width: 920px) {
+      .hero-grid { grid-template-columns: 1.1fr .9fr; gap: 3rem; }
+    }
+    .hero-copy p.lead {
+      margin-top: 1rem; font-size: 1.15rem; color: var(--muted); max-width: 36rem;
+    }
+    .trust-row {
+      display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.35rem;
+    }
+    .stat-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem;
+      margin-top: 1.75rem;
+    }
+    .stat {
+      background: rgba(255,255,255,.03); border: 1px solid var(--line);
+      border-radius: 14px; padding: 1rem; text-align: center;
+    }
+    .stat strong {
+      display: block; font-size: 1.45rem; color: var(--accent);
+      font-family: "Instrument Serif", Georgia, serif;
+    }
+    .stat span { font-size: .8rem; color: var(--muted); }
+
+    /* Form card */
+    .form-card {
+      background: linear-gradient(180deg, rgba(32,54,42,.94), rgba(28,46,36,.96));
+      border: 1px solid rgba(62,207,142,.2);
+      border-radius: 22px; padding: 1.5rem; box-shadow: var(--shadow);
+    }
+    .form-card h3 { margin-bottom: .25rem; }
+    .form-card .sub { color: var(--muted); font-size: .92rem; margin-bottom: 1.1rem; }
+    form { display: grid; gap: .75rem; }
+    label { font-size: .8rem; font-weight: 600; color: var(--muted); display: block; margin-bottom: .3rem; }
+    input, select, textarea {
+      width: 100%; background: rgba(0,0,0,.25); border: 1px solid var(--line);
+      color: var(--text); border-radius: 12px; padding: .8rem .9rem; font: inherit;
+      outline: none; transition: border-color .15s;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+    textarea { min-height: 88px; resize: vertical; }
+    .form-row { display: grid; gap: .75rem; }
+    @media (min-width: 560px) { .form-row.two { grid-template-columns: 1fr 1fr; } }
+    .form-note { font-size: .78rem; color: var(--muted); text-align: center; margin-top: .25rem; }
+    .form-success {
+      display: none; text-align: center; padding: 1.5rem .5rem;
+    }
+    .form-success.show { display: block; }
+    form.hide { display: none; }
+
+    section { padding: 4rem 0; }
+    .section-head { max-width: 40rem; margin-bottom: 2rem; }
+    .section-head p { margin-top: .75rem; color: var(--muted); }
+
+    /* Benefits */
+    .benefits {
+      display: grid; gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) { .benefits { grid-template-columns: repeat(3, 1fr); } }
+    .benefit {
+      background: rgba(22,36,28,.78); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.35rem; backdrop-filter: blur(8px);
+    }
+    .benefit .icon {
+      width: 42px; height: 42px; border-radius: 12px;
+      background: rgba(62,207,142,.12); color: var(--accent);
+      display: grid; place-items: center; margin-bottom: .9rem; font-size: 1.2rem;
+    }
+    .benefit p { color: var(--muted); margin-top: .45rem; font-size: .95rem; }
+
+    /* Steps */
+    .steps {
+      display: grid; gap: 1rem;
+    }
+    @media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+    .step {
+      position: relative;
+      background: rgba(28,46,36,.82); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.5rem; backdrop-filter: blur(8px);
+    }
+    .step-num {
+      width: 2rem; height: 2rem; border-radius: 50%;
+      background: var(--accent); color: #062016; font-weight: 800;
+      display: grid; place-items: center; margin-bottom: 1rem;
+    }
+    .step p { color: var(--muted); margin-top: .5rem; font-size: .95rem; }
+
+    /* Situations */
+    .chips {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+    }
+    .chip {
+      background: rgba(255,255,255,.04); border: 1px solid var(--line);
+      border-radius: 999px; padding: .55rem 1rem; font-size: .92rem; color: var(--muted);
+    }
+
+    /* About / team */
+    .about-grid {
+      display: grid; gap: 2rem; align-items: start;
+    }
+    @media (min-width: 860px) {
+      .about-grid { grid-template-columns: 1.1fr .9fr; }
+    }
+    .about-card {
+      background: linear-gradient(160deg, #243a2f, var(--bg-soft));
+      border: 1px solid var(--line); border-radius: 22px; padding: 1.75rem;
+    }
+    .team {
+      display: grid; gap: .85rem;
+    }
+    .person {
+      display: flex; gap: 1rem; align-items: center;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 14px; padding: 1rem;
+    }
+    .avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(145deg, #3ecf8e, #1f6b4a);
+      display: grid; place-items: center; font-weight: 800; color: #062016;
+      flex-shrink: 0;
+    }
+    .person strong { display: block; }
+    .person span { color: var(--muted); font-size: .9rem; }
+
+    /* Compare */
+    .compare {
+      overflow-x: auto; border-radius: var(--radius);
+      border: 1px solid var(--line); background: var(--bg-soft);
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 640px; }
+    th, td { padding: 1rem 1.1rem; text-align: left; border-bottom: 1px solid var(--line); font-size: .95rem; }
+    th { color: var(--muted); font-weight: 600; background: rgba(0,0,0,.2); }
+    td:nth-child(2) { color: var(--accent); font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+
+    /* FAQ */
+    .faq { display: grid; gap: .75rem; max-width: 760px; }
+    details {
+      background: var(--bg-soft); border: 1px solid var(--line);
+      border-radius: 14px; padding: 1rem 1.15rem;
+    }
+    summary {
+      cursor: pointer; font-weight: 600; list-style: none;
+      display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--accent); font-size: 1.3rem; font-weight: 400; }
+    details[open] summary::after { content: "–"; }
+    details p { margin-top: .75rem; color: var(--muted); }
+
+    /* CTA */
+    .cta-band {
+      background: linear-gradient(135deg, rgba(31,74,53,.92), rgba(22,53,38,.9) 55%, rgba(15,26,20,.88));
+      border: 1px solid rgba(62,207,142,.25);
+      border-radius: 24px; padding: 2.5rem 1.75rem; text-align: center;
+    }
+    .cta-band p { color: var(--muted); margin: .85rem auto 1.4rem; max-width: 34rem; }
+
+    footer {
+      border-top: 1px solid var(--line); padding: 2rem 0 2.5rem;
+      color: var(--muted); font-size: .9rem;
+    }
+    .footer-row {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      justify-content: space-between; align-items: center;
+    }
+    .soft-band { background: rgba(22,36,28,.72); border-block: 1px solid var(--line); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">
+        <span class="logo-mark">SG</span>
+        <span>SGRE Solutions</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+        <a href="#compare">Compare</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn nav-cta" href="#offer">Get a cash offer</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot"></span> Vacant land cash buyers</span>
+          <h1 style="margin-top:.85rem;">We Buy Land for Cash</h1>
+          <p class="lead">Fair cash offers on vacant lots and acreage. Skip the listing, showings, and waiting — close when it works for you.</p>
+          <p class="muted" style="margin-top:1rem;">Call or text <a href="tel:+17863823874" style="color:var(--accent);font-weight:600;">(786) 382-3874</a></p>
+          <div class="trust-row">
+            <span class="pill">No fees</span>
+            <span class="pill">As-is</span>
+            <span class="pill">Your timeline</span>
+            <span class="pill">No obligation</span>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><strong>$0</strong><span>Agent fees</span></div>
+            <div class="stat"><strong>As-is</strong><span>Any condition</span></div>
+            <div class="stat"><strong>Cash</strong><span>No financing risk</span></div>
+          </div>
+        </div>
+
+        <div class="form-card" id="offer">
+          <h3>Get your cash offer</h3>
+          <p class="sub">Tell us about the property. A local buyer will follow up soon. Your info stays private.</p>
+          <form id="lead-form" action="#" method="post">
+            <div class="form-row two">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" required placeholder="Jane Seller" autocomplete="name" />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required placeholder="(555) 555-5555" autocomplete="tel" />
+              </div>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@email.com" autocomplete="email" />
+            </div>
+            <div>
+              <label for="address">Property address / county</label>
+              <input id="address" name="address" required placeholder="County, state, or parcel / street if you have it" />
+            </div>
+            <div class="form-row two">
+              <div>
+                <label for="acres">Approx. acres</label>
+                <input id="acres" name="acres" placeholder="e.g. 2.5" />
+              </div>
+              <div>
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="asap">ASAP</option>
+                  <option value="30">Within 30 days</option>
+                  <option value="60">Within 60 days</option>
+                  <option value="flexible" selected>Flexible</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="notes">Anything we should know?</label>
+              <textarea id="notes" name="notes" placeholder="Access, taxes, inherited, wanting a quick close…"></textarea>
+            </div>
+            <button class="btn" type="submit" style="width:100%;">Request my cash offer</button>
+            <p class="form-note">Free · no obligation · we buy vacant land directly</p>
+          </form>
+          <div class="form-success" id="form-success">
+            <div style="font-size:2rem;margin-bottom:.5rem;">✓</div>
+            <h3>Got it — thanks.</h3>
+            <p class="muted" style="margin-top:.5rem;">We’ll review the property and reach out shortly. No pressure either way.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Why sell to us</span>
+          <h2 style="margin-top:.6rem;">A local team that buys land directly for cash</h2>
+          <p>Skip repairs, showings, and agent fees. See your offer first — accept only if it works for you.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit">
+            <div class="icon">$</div>
+            <h3>Sell as-is for cash</h3>
+            <p>Raw, overgrown, steep, or tucked away — we buy vacant land in many conditions. No cleanup required.</p>
+          </article>
+          <article class="benefit">
+            <div class="icon">Ø</div>
+            <h3>No fees or commissions</h3>
+            <p>We’re the buyer, not a listing agent. No commissions, no listing prep, no surprise seller fees from us.</p>
+          </article>
+          <article class="benefit">
+            <div class="icon">⏱</div>
+            <h3>Close on your schedule</h3>
+            <p>Need a fast close or more time? You choose the timeline. We handle the paperwork once you’re ready.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Simple process</span>
+          <h2 style="margin-top:.6rem;">Selling your land takes 3 steps</h2>
+          <p>Straightforward process with a small team that actually buys vacant land.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <h3>Tell us about the property</h3>
+            <p>Fill out the short form or call. We’ll ask a few quick questions about the lot, access, and your timeline.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">2</div>
+            <h3>Get a fair cash offer</h3>
+            <p>We review comps and the parcel, then give you a clear cash offer — no pressure and no obligation.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">3</div>
+            <h3>Choose your closing date</h3>
+            <p>Accept only if it works for you. We coordinate title and close when you’re ready.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Life happens</span>
+          <h2 style="margin-top:.6rem;">Selling land because of a life change?</h2>
+          <p>Whatever you’re dealing with, we can make a cash offer on vacant land as-is.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">Inherited land</span>
+          <span class="chip">Back taxes</span>
+          <span class="chip">Out of state owner</span>
+          <span class="chip">Divorce</span>
+          <span class="chip">Relocating</span>
+          <span class="chip">Tired of holding costs</span>
+          <span class="chip">No road access hassle</span>
+          <span class="chip">Want a quick close</span>
+          <span class="chip">Don’t want to list</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> About us</span>
+          <h2 style="margin-top:.6rem;">We’re genuine land buyers — not a giant corporation</h2>
+          <p class="muted" style="margin-top:1rem;">
+            SGRE Solutions buys vacant land from owners who want a simple sale: no MLS listing, no showings, and no waiting on a buyer’s loan.
+            We’re a small team focused on fair deals and clear communication.
+          </p>
+          <p class="muted" style="margin-top:.85rem;">
+            We’re not realtors shopping your lot around. We buy land as-is for cash and work on your timeline.
+          </p>
+          <div style="margin-top:1.5rem;">
+            <a class="btn" href="#offer">Request a cash offer</a>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3 style="margin-bottom:1rem;">Who works here</h3>
+          <div class="team">
+            <div class="person">
+              <div class="avatar">SG</div>
+              <div>
+                <strong>Sergio Guifarro</strong>
+                <span>Founder</span>
+              </div>
+            </div>
+            <div class="person">
+              <div class="avatar">RL</div>
+              <div>
+                <strong>Ralph</strong>
+                <span>Acquisitions</span>
+              </div>
+            </div>
+            <div class="person">
+              <div class="avatar">VF</div>
+              <div>
+                <strong>Von</strong>
+                <span>Acquisitions</span>
+              </div>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:1rem;font-size:.9rem;">Want different names or titles? Easy to update before we go live.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="soft-band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Side by side</span>
+          <h2 style="margin-top:.6rem;">Compare your options</h2>
+          <p>Here’s how selling to us stacks up against a traditional land listing.</p>
+        </div>
+        <div class="compare">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Selling to SGRE</th>
+                <th>Listing with an agent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Commissions / fees</td>
+                <td>$0 from us</td>
+                <td>Often several % plus costs</td>
+              </tr>
+              <tr>
+                <td>Repairs / cleanup</td>
+                <td>None — sell as-is</td>
+                <td>Often expected before listing</td>
+              </tr>
+              <tr>
+                <td>Showings</td>
+                <td>None</td>
+                <td>As many as it takes</td>
+              </tr>
+              <tr>
+                <td>Financing risk</td>
+                <td>None — we pay cash</td>
+                <td>Buyer financing can fall through</td>
+              </tr>
+              <tr>
+                <td>Closing date</td>
+                <td>You choose</td>
+                <td>Depends on buyer &amp; lender</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> FAQ</span>
+          <h2 style="margin-top:.6rem;">Common questions</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Is there any obligation if I ask for an offer?</summary>
+            <p>None at all. Requesting an offer is free. You see the number first, ask questions, and decide on your own time. If it isn’t a fit, just say no.</p>
+          </details>
+          <details>
+            <summary>How is this different from listing with an agent?</summary>
+            <p>An agent lists your land and takes a commission if it sells. We are the buyer. We purchase vacant land directly with cash and as-is — no commission, no showings, no waiting on a buyer’s loan.</p>
+          </details>
+          <details>
+            <summary>Are there fees or closing costs?</summary>
+            <p>You don’t pay us an agent commission or listing fee. Closing costs depend on the deal and local custom — we’ll be clear up front before you commit.</p>
+          </details>
+          <details>
+            <summary>How do you come up with my offer?</summary>
+            <p>We look at recent comparable land sales nearby, the size and access of your parcel, and what it would take for a buyer to use it. Cash offers are usually below a perfect retail sale — in exchange you skip time, fees, and uncertainty.</p>
+          </details>
+          <details>
+            <summary>Do I need to clear or improve the land first?</summary>
+            <p>No. We buy vacant land as-is in many conditions. Keep what matters to you and leave the rest.</p>
+          </details>
+          <details>
+            <summary>What kinds of land do you buy?</summary>
+            <p>Primarily vacant lots and acreage. Rural parcels, infill lots, and land owners who want a simple cash sale are a good fit. If you’re unsure, send the details — we’ll tell you honestly.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta-band">
+          <h2>Let’s make selling your land simple</h2>
+          <p>Whatever the reason and whatever the condition, we’d be glad to take a look. Reach out for a no-obligation cash offer and a closing date that fits your plans.</p>
+          <a class="btn" href="#offer">Get my cash offer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>
+        <strong style="color:var(--text);">SGRE Solutions LLC</strong><br />
+        We buy land for cash.
+      </div>
+      <div>
+        <a href="tel:+17863823874">(786) 382-3874</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:sgresolutions1@gmail.com">sgresolutions1@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="#offer">Request an offer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("lead-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // Wire to Formspree / Fusion webhook / email when you pick a host.
+      this.classList.add("hide");
+      document.getElementById("form-success").classList.add("show");
+    });
+  </script>
+</body>
+</html>
