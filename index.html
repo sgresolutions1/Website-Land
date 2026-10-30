@@ -316,21 +316,31 @@
       justify-content: space-between; align-items: center;
     }
     .soft-band { background: rgba(22,36,28,.72); border-block: 1px solid var(--line); backdrop-filter: blur(6px); }
+    .nav-phone { color: var(--gold); font-weight: 700; white-space: nowrap; font-size: .95rem; }
+    @media (max-width: 640px) { .nav-phone span { display: none; } .nav-phone { font-size: 1.3rem; } }
+    .bought-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .bought { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; border-top: 3px solid var(--gold); }
+    .bought .tag { display:inline-block; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color: var(--accent); background: rgba(62,207,142,.12); padding:.25rem .6rem; border-radius:999px; }
+    .bought h3 { margin-top: .75rem; }
+    .bought p { color: var(--muted); margin-top: .35rem; }
+    .form-error { display:none; color:#ffb4a8; font-size:.85rem; text-align:center; margin-top:.5rem; }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
       <a class="logo" href="#top">
-        <img class="logo-img" src="logo-icon.png" alt="SGRE Solutions LLC logo" width="56" height="56">
+        <img class="logo-img" src="logo-3d-icon.png" alt="SGRE Solutions LLC logo" width="56" height="56">
         <span>SGRE Solutions</span>
       </a>
       <nav class="nav-links">
         <a href="#how">How it works</a>
         <a href="#about">About</a>
+        <a href="#bought">Recently bought</a>
         <a href="#compare">Compare</a>
         <a href="#faq">FAQ</a>
       </nav>
+      <a class="nav-phone" href="tel:+17863823874" aria-label="Call SGRE Solutions">📞 <span>(786) 382-3874</span></a>
       <a class="btn nav-cta" href="#offer">Get a cash offer</a>
     </div>
   </header>
@@ -398,6 +408,7 @@
               <textarea id="notes" name="notes" placeholder="Access, taxes, inherited, wanting a quick close…"></textarea>
             </div>
             <button class="btn" type="submit" style="width:100%;">Request my cash offer</button>
+            <p class="form-error" id="form-error">Something went wrong. Please call or text <a href="tel:+17863823874">(786) 382-3874</a>.</p>
             <p class="form-note">Free · no obligation · we buy vacant land directly</p>
           </form>
           <div class="form-success" id="form-success">
@@ -487,9 +498,7 @@
     <section id="about">
       <div class="wrap about-grid">
         <div>
-          <div style="display:inline-block;background:#fff;border-radius:14px;padding:.6rem 1rem;margin-bottom:1rem;border-bottom:3px solid var(--gold);">
-            <img src="logo.png" alt="SGRE Solutions LLC logo" style="display:block;height:64px;width:auto;max-width:100%;" />
-          </div><br />
+          <img src="logo-3d-dark.png" alt="SGRE Solutions LLC logo" style="display:block;height:170px;width:auto;max-width:100%;margin-bottom:1rem;" />
           <span class="eyebrow"><span class="dot"></span> About us</span>
           <h2 style="margin-top:.6rem;">About SGRE Solutions</h2>
           <p class="muted" style="margin-top:1rem;">
@@ -542,6 +551,21 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bought">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Recently bought</span>
+          <h2 style="margin-top:.6rem;">Land we&rsquo;ve recently bought</h2>
+          <p>Small lots, package deals and big acreage, all across the country.</p>
+        </div>
+        <div class="bought-grid">
+          <article class="bought"><span class="tag">Package deal</span><h3>3-lot package</h3><p>North Port, FL</p></article>
+          <article class="bought"><span class="tag">Lot</span><h3>1-acre lot</h3><p>Waycross, GA</p></article>
+          <article class="bought"><span class="tag">Acreage</span><h3>40-acre lot</h3><p>Kingman, AZ</p></article>
         </div>
       </div>
     </section>
@@ -602,28 +626,32 @@
         </div>
         <div class="faq">
           <details open>
-            <summary>Is there any obligation if I ask for an offer?</summary>
-            <p>None at all. Requesting an offer is free. You see the number first, ask questions, and decide on your own time. If it isn’t a fit, just say no.</p>
-          </details>
-          <details>
-            <summary>How is this different from listing with an agent?</summary>
-            <p>An agent lists your land and takes a commission if it sells. We are the buyer. We purchase vacant land directly with cash and as-is — no commission, no showings, no waiting on a buyer’s loan.</p>
-          </details>
-          <details>
-            <summary>Are there fees or closing costs?</summary>
-            <p>You don’t pay us an agent commission or listing fee. Closing costs depend on the deal and local custom — we’ll be clear up front before you commit.</p>
-          </details>
-          <details>
             <summary>How do you come up with my offer?</summary>
-            <p>We look at recent comparable land sales nearby, the size and access of your parcel, and what it would take for a buyer to use it. Cash offers are usually below a perfect retail sale — in exchange you skip time, fees, and uncertainty.</p>
+            <p>We look at recent sales of similar land nearby, plus the size, access and location of your parcel, and make you a fair cash offer based on that.</p>
           </details>
           <details>
-            <summary>Do I need to clear or improve the land first?</summary>
-            <p>No. We buy vacant land as-is in many conditions. Keep what matters to you and leave the rest.</p>
+            <summary>Are there any fees or commissions?</summary>
+            <p>No. There are no commissions or fees, and we pay all closing costs. The offer you accept is what you get.</p>
           </details>
           <details>
-            <summary>What kinds of land do you buy?</summary>
-            <p>Primarily vacant lots and acreage. Rural parcels, infill lots, and land owners who want a simple cash sale are a good fit. If you’re unsure, send the details — we’ll tell you honestly.</p>
+            <summary>How fast can you close?</summary>
+            <p>It depends mostly on the title work for your property. Many deals close in a few weeks, and you can pick a later date if that works better for you.</p>
+          </details>
+          <details>
+            <summary>What if there are back taxes, liens, title issues or probate?</summary>
+            <p>We handle them. Back taxes, liens, title problems, inherited land and probate are things we work through every day.</p>
+          </details>
+          <details>
+            <summary>Do I need to clean up the land or get a survey?</summary>
+            <p>No. We buy land as-is. No cleanup, no survey and no improvements needed.</p>
+          </details>
+          <details>
+            <summary>Where do you buy land?</summary>
+            <p>Anywhere in the United States. We're based in Miami, FL and buy land nationwide.</p>
+          </details>
+          <details>
+            <summary>Is there any obligation if I ask for an offer?</summary>
+            <p>None. Asking for an offer is free. If it isn't a fit, just say no.</p>
           </details>
         </div>
       </div>
@@ -635,6 +663,7 @@
           <h2>Let’s make selling your land simple</h2>
           <p>Whatever the reason and whatever the condition, we’d be glad to take a look. Reach out for a no-obligation cash offer and a closing date that fits your plans.</p>
           <a class="btn" href="#offer">Get my cash offer</a>
+          <p style="margin:1rem 0 0;">Or call or text <a href="tel:+17863823874" style="color:var(--gold);font-weight:700;">(786) 382-3874</a></p>
         </div>
       </div>
     </section>
@@ -643,7 +672,7 @@
   <footer>
     <div class="wrap footer-row">
       <div style="display:flex;gap:.75rem;align-items:center;">
-        <img src="logo-icon.png" alt="" width="40" height="40" style="width:40px;height:40px;object-fit:contain;flex-shrink:0;" />
+        <img src="logo-3d-dark.png" alt="SGRE Solutions LLC logo" style="height:110px;width:auto;flex-shrink:0;" />
         <div>
           <strong style="color:var(--text);">SGRE Solutions LLC</strong><br />
           We buy land for cash.
@@ -660,11 +689,22 @@
   </footer>
 
   <script>
+    // Fusion (HighLevel) inbound webhook URL. Placeholder until Sergio approves the Fusion workflow.
+    // A webhook URL only accepts leads; it is not an API key, so it is safe in public HTML.
+    var FUSION_WEBHOOK_URL = "PASTE_FUSION_INBOUND_WEBHOOK_URL_HERE";
     document.getElementById("lead-form").addEventListener("submit", function (e) {
       e.preventDefault();
-      // Wire to Formspree / Fusion webhook / email when you pick a host.
-      this.classList.add("hide");
-      document.getElementById("form-success").classList.add("show");
+      var form = this, btn = form.querySelector('button[type="submit"]');
+      var data = Object.fromEntries(new FormData(form).entries());
+      var parts = data.name.trim().split(/\s+/);
+      data.first_name = parts.shift(); data.last_name = parts.join(" ");
+      data.source = "SGRE website"; data.page = location.href;
+      function done() { form.classList.add("hide"); document.getElementById("form-success").classList.add("show"); }
+      if (FUSION_WEBHOOK_URL.indexOf("http") !== 0) { console.warn("Fusion webhook not set yet"); done(); return; }
+      btn.disabled = true; btn.textContent = "Sending…";
+      fetch(FUSION_WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(data) })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
+        .catch(function () { btn.disabled = false; btn.textContent = "Request my cash offer"; document.getElementById("form-error").style.display = "block"; });
     });
   </script>
 </body>
