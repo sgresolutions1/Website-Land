@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>We Buy Land for Cash | SGRE Solutions</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="description" content="Sell your vacant land fast for a fair cash offer. No fees, no agents, close on your timeline. SGRE Solutions buys land as-is." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -111,6 +113,8 @@
     .logo {
       display: flex; align-items: center; gap: .65rem; font-weight: 700;
     }
+    .logo-img { height: 56px; width: 56px; display: block; }
+    @media (max-width: 480px) { .logo-img { height: 44px; width: 44px; } }
     .logo-mark {
       width: 36px; height: 36px; border-radius: 10px;
       background: linear-gradient(145deg, var(--accent), #1a7a52);
@@ -317,7 +321,7 @@
   <header>
     <div class="wrap nav">
       <a class="logo" href="#top">
-        <span class="logo-mark">SG</span>
+        <img class="logo-img" src="logo-icon.png" alt="SGRE Solutions LLC logo" width="56" height="56">
         <span>SGRE Solutions</span>
       </a>
       <nav class="nav-links">
