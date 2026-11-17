@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 <style>
     :root {
+      --land-photo: url("../img/bg-north-carolina.jpg");
       --bg: #0f1a14;
       --bg-soft: #16241c;
       --card: #1c2e24;
@@ -43,6 +44,7 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
+    /* Background: "Agricultural Field and Trees" — rural farm landscape with hay bales under a blue sky in North Carolina. Location on the photo page: NC, United States. Pexels https://www.pexels.com/photo/agricultural-field-and-trees-2257436/ by Mark Stebnicki (NC Farm Bureau). Pexels License (free commercial use). */
     body::before {
       content: "";
       position: fixed;
@@ -50,7 +52,7 @@
       z-index: -2;
       background:
         linear-gradient(180deg, rgba(10,18,14,.55) 0%, rgba(10,18,14,.72) 45%, rgba(10,18,14,.88) 100%),
-        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80")
+        var(--land-photo)
           center / cover no-repeat fixed;
     }
     body::after {
@@ -148,7 +150,7 @@
       position: relative; padding: 4.25rem 0 4.5rem; overflow: hidden;
       background:
         linear-gradient(105deg, rgba(10,18,14,.82) 0%, rgba(10,18,14,.58) 48%, rgba(10,18,14,.38) 100%),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80")
+        var(--land-photo)
           center 40% / cover no-repeat;
       border-bottom: 1px solid var(--line);
     }
@@ -708,6 +710,11 @@
             <li>Coastal counties such as New Hanover, Brunswick, Onslow, Pender and Columbus</li>
             <li>Rural mountain and foothill parcels in western North Carolina when the land is a fit</li>
           </ul>
+          <h2>Counties we buy in</h2>
+          <p>If your land is in one of these North Carolina counties, start with the county page. We still look at land in other parts of North Carolina, too.</p>
+          <div class="other-areas">
+          <a href="../sell-land-davidson-county-nc/">Davidson County, NC</a>
+          </div>
         </div>
       </div>
     </section>
