@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 <style>
     :root {
+      --land-photo: url("../img/bg-arizona.jpg");
       --bg: #0f1a14;
       --bg-soft: #16241c;
       --card: #1c2e24;
@@ -43,6 +44,7 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
+    /* Background: "Scenic Arizona Desert Highway under Clear Sky" — arid Arizona desert with mountains (same Feb 3, 2024 shoot as the Mohave photo, which is tagged Arizona, United States). Pexels https://www.pexels.com/photo/scenic-arizona-desert-highway-under-clear-sky-33448092/ by Luana Scorsoni. Pexels License (free commercial use). */
     body::before {
       content: "";
       position: fixed;
@@ -50,7 +52,7 @@
       z-index: -2;
       background:
         linear-gradient(180deg, rgba(10,18,14,.55) 0%, rgba(10,18,14,.72) 45%, rgba(10,18,14,.88) 100%),
-        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80")
+        var(--land-photo)
           center / cover no-repeat fixed;
     }
     body::after {
@@ -148,7 +150,7 @@
       position: relative; padding: 4.25rem 0 4.5rem; overflow: hidden;
       background:
         linear-gradient(105deg, rgba(10,18,14,.82) 0%, rgba(10,18,14,.58) 48%, rgba(10,18,14,.38) 100%),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80")
+        var(--land-photo)
           center 40% / cover no-repeat;
       border-bottom: 1px solid var(--line);
     }
@@ -705,6 +707,11 @@
             <li>Pima County (Tucson area, Marana, Sahuarita, Ajo)</li>
             <li>Other rural counties including La Paz, Cochise, Navajo, Apache, and Coconino</li>
           </ul>
+          <h2>Counties we buy in</h2>
+          <p>If your land is in one of these Arizona counties, start with the county page. We still look at land in other parts of Arizona, too.</p>
+          <div class="other-areas">
+          <a href="../sell-land-mohave-county-az/">Mohave County, AZ</a>
+          </div>
         </div>
       </div>
     </section>
