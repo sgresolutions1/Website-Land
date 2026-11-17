@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sell My Land Fast in Franklin County, VA | SGRE Solutions</title>
+  <link rel="canonical" href="https://sgresolutions.com/sell-land-franklin-county-va/" />
+  <meta name="description" content="Sell my land fast in Franklin County, VA. We buy land in Rocky Mount, Ferrum, and Boones Mill for cash. No fees, no commissions, no obligation." />
+  <meta property="og:title" content="Sell My Land Fast in Franklin County, VA | SGRE Solutions" />
+  <meta property="og:description" content="Sell my land fast in Franklin County, VA. We buy land in Rocky Mount, Ferrum, and Boones Mill for cash. No fees, no commissions, no obligation." />
+  <meta property="og:url" content="https://sgresolutions.com/sell-land-franklin-county-va/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sgresolutions.com/logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+    :root {
+      --land-photo: url("../img/bg-virginia.jpg");
+      --bg: #0f1a14;
+      --bg-soft: #16241c;
+      --card: #1c2e24;
+      --line: rgba(255,255,255,0.08);
+      --text: #f4f7f5;
+      --muted: #a8b7ae;
+      --accent: #3ecf8e;
+      --accent-dark: #2aa86f;
+      --gold: #e8c547;
+      --white: #fff;
+      --radius: 18px;
+      --shadow: 0 22px 50px rgba(0,0,0,0.38);
+      --shadow-soft: 0 10px 28px rgba(0,0,0,0.22);
+      --max: 1140px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    /* Background: "Scenic View of Delaplane Virginia Countryside" — rolling hills and valleys in Delaplane, Virginia, United States. Pexels https://www.pexels.com/photo/scenic-view-of-delaplane-virginia-countryside-36503022/ by Tristan W. Pexels License (free commercial use). */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(180deg, rgba(10,18,14,.55) 0%, rgba(10,18,14,.72) 45%, rgba(10,18,14,.88) 100%),
+        var(--land-photo)
+          center / cover no-repeat fixed;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(62,207,142,.12), transparent 45%),
+        radial-gradient(ellipse at 85% 10%, rgba(232,197,71,.08), transparent 40%);
+      pointer-events: none;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .78rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .eyebrow .dot {
+      width: .45rem; height: .45rem; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 0 4px rgba(62,207,142,.2);
+    }
+    h1, h2, h3 { line-height: 1.15; font-weight: 700; }
+    h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2.6rem, 5.4vw, 4rem);
+      font-weight: 400; letter-spacing: -0.025em;
+    }
+    h2 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2rem, 3.6vw, 2.75rem);
+      font-weight: 400; letter-spacing: -0.02em;
+    }
+    h3 { font-size: 1.12rem; letter-spacing: -0.01em; }
+    .muted { color: var(--muted); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      background: var(--accent); color: #062016; font-weight: 700;
+      padding: .95rem 1.45rem; border-radius: 999px; border: none;
+      cursor: pointer; transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+      font-size: 1rem; box-shadow: 0 10px 22px rgba(62,207,142,.22);
+    }
+    .btn:hover { background: #55dba0; transform: translateY(-1px); box-shadow: 0 14px 28px rgba(62,207,142,.3); }
+    .btn:active { transform: translateY(0); }
+    .btn:disabled { opacity: .7; cursor: not-allowed; transform: none; box-shadow: none; }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--line); box-shadow: none;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.05); transform: none; box-shadow: none; }
+
+    /* Nav */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(10,18,14,.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .85rem 0; gap: .85rem;
+    }
+    .logo {
+      display: flex; align-items: center; gap: .65rem; font-weight: 700;
+      letter-spacing: -0.02em; flex-shrink: 0;
+    }
+    .logo-img { height: 56px; width: 56px; display: block; }
+    @media (max-width: 480px) { .logo-img { height: 44px; width: 44px; } }
+    .nav-links { display: flex; gap: 1.2rem; align-items: center; color: var(--muted); font-size: .93rem; }
+    .nav-links a { transition: color .15s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: none; }
+    .nav-phone {
+      color: var(--gold); font-weight: 700; white-space: nowrap; font-size: .95rem;
+      display: inline-flex; align-items: center; gap: .4rem;
+    }
+    .nav-phone svg { width: 16px; height: 16px; flex-shrink: 0; }
+    @media (min-width: 800px) {
+      .nav-cta { display: inline-flex; }
+      .nav-links { display: flex; }
+    }
+    @media (max-width: 799px) {
+      .nav-links { display: none; }
+      .nav-cta { display: inline-flex; padding: .65rem 1rem; font-size: .88rem; }
+    }
+    @media (max-width: 640px) {
+      .nav-phone span { display: none; }
+      .nav-phone { font-size: 1.05rem; }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative; padding: 4.25rem 0 4.5rem; overflow: hidden;
+      background:
+        linear-gradient(105deg, rgba(10,18,14,.82) 0%, rgba(10,18,14,.58) 48%, rgba(10,18,14,.38) 100%),
+        var(--land-photo)
+          center 40% / cover no-repeat;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-grid {
+      position: relative;
+      display: grid; gap: 2.75rem; align-items: start;
+    }
+    @media (min-width: 920px) {
+      .hero-grid { grid-template-columns: 1.08fr .92fr; gap: 3.25rem; align-items: center; }
+    }
+    .hero-copy p.lead {
+      margin-top: 1.1rem; font-size: 1.18rem; color: var(--muted); max-width: 36rem; line-height: 1.65;
+    }
+    .hero-phone { margin-top: 1.05rem; }
+    .hero-phone a { color: var(--accent); font-weight: 600; }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .7rem;
+      margin-top: 1.85rem;
+    }
+    @media (min-width: 640px) {
+      .trust-row { grid-template-columns: repeat(4, 1fr); }
+    }
+    .trust-item {
+      display: flex; flex-direction: column; align-items: flex-start; gap: .45rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: .9rem .85rem;
+      font-weight: 600;
+      font-size: .88rem;
+      line-height: 1.3;
+      box-shadow: var(--shadow-soft);
+    }
+    .trust-item svg { color: var(--accent); width: 20px; height: 20px; }
+    .trust-item span { color: var(--text); }
+
+    /* Form card */
+    .form-card {
+      background: linear-gradient(180deg, rgba(34,56,44,.96), rgba(24,40,32,.98));
+      border: 1px solid rgba(62,207,142,.22);
+      border-radius: 24px;
+      padding: 1.7rem 1.55rem 1.5rem;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .form-card::before {
+      content: "";
+      position: absolute; left: 1.4rem; right: 1.4rem; top: 0; height: 3px;
+      border-radius: 0 0 3px 3px;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+    .form-card h3 {
+      margin-bottom: .3rem;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.7rem; font-weight: 400; letter-spacing: -0.02em;
+    }
+    .form-card .sub { color: var(--muted); font-size: .94rem; margin-bottom: 1.2rem; }
+    form { display: grid; gap: .8rem; }
+    label { font-size: .8rem; font-weight: 600; color: var(--muted); display: block; margin-bottom: .35rem; }
+    input, select, textarea {
+      width: 100%; background: rgba(0,0,0,.28); border: 1px solid var(--line);
+      color: var(--text); border-radius: 12px; padding: .85rem .95rem; font: inherit;
+      outline: none; transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    input::placeholder, textarea::placeholder { color: rgba(168,183,174,.62); }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(62,207,142,.18);
+    }
+    option { background: #1c2e24; color: var(--text); }
+    textarea { min-height: 92px; resize: vertical; }
+    .form-row { display: grid; gap: .8rem; }
+    @media (min-width: 560px) { .form-row.two { grid-template-columns: 1fr 1fr; } }
+    .form-note { font-size: .78rem; color: var(--muted); text-align: center; margin-top: .15rem; }
+    .form-success {
+      display: none; text-align: center; padding: 1.7rem .5rem;
+    }
+    .form-success.show { display: block; }
+    .form-success .check {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(62,207,142,.14); color: var(--accent);
+      display: grid; place-items: center; margin: 0 auto .85rem;
+    }
+    form.hide { display: none; }
+    .form-error { display: none; color: #ffb4a8; font-size: .85rem; text-align: center; margin-top: .15rem; }
+    .form-error a { color: var(--gold); font-weight: 600; }
+    .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px; height: 1px; overflow: hidden;
+    }
+
+    section { padding: 4.75rem 0; }
+    .section-head { max-width: 40rem; margin-bottom: 2.15rem; }
+    .section-head h2 { margin-top: .65rem; }
+    .section-head p { margin-top: .8rem; color: var(--muted); }
+
+    /* Benefits */
+    .benefits {
+      display: grid; gap: 1.1rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) { .benefits { grid-template-columns: repeat(3, 1fr); } }
+    .benefit {
+      background: rgba(22,36,28,.82); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.5rem; backdrop-filter: blur(8px);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+    .benefit:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(62,207,142,.3); }
+    .benefit .icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(62,207,142,.12); color: var(--accent);
+      display: grid; place-items: center; margin-bottom: 1rem;
+    }
+    .benefit .icon svg { width: 22px; height: 22px; }
+    .benefit p { color: var(--muted); margin-top: .5rem; font-size: .96rem; }
+
+    /* Steps */
+    .steps { display: grid; gap: 1.1rem; position: relative; }
+    @media (min-width: 800px) {
+      .steps { grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+      .steps::before {
+        content: "";
+        position: absolute;
+        top: 1.7rem;
+        left: 14%;
+        right: 14%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(62,207,142,.4), transparent);
+        z-index: 0;
+      }
+    }
+    .step {
+      position: relative; z-index: 1;
+      background: rgba(28,46,36,.88); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.6rem 1.45rem; backdrop-filter: blur(8px);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+    .step:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(62,207,142,.3); }
+    .step-num {
+      width: 2.15rem; height: 2.15rem; border-radius: 50%;
+      background: var(--accent); color: #062016; font-weight: 800;
+      display: grid; place-items: center; margin-bottom: 1.05rem;
+      box-shadow: 0 0 0 6px rgba(15,26,20,.9), 0 8px 16px rgba(62,207,142,.25);
+    }
+    .step p { color: var(--muted); margin-top: .55rem; font-size: .96rem; }
+
+    /* Situations */
+    .chips { display: flex; flex-wrap: wrap; gap: .6rem; }
+    .chip {
+      background: rgba(255,255,255,.04); border: 1px solid var(--line);
+      border-radius: 999px; padding: .55rem 1rem; font-size: .92rem; color: var(--muted);
+      transition: border-color .15s ease, color .15s ease, background .15s ease;
+    }
+    .chip:hover { border-color: rgba(62,207,142,.3); color: var(--text); background: rgba(62,207,142,.08); }
+
+    /* About / team */
+    .about-grid { display: grid; gap: 2.2rem; align-items: start; }
+    @media (min-width: 860px) {
+      .about-grid { grid-template-columns: 1.1fr .9fr; }
+    }
+    .about-logo { display: block; height: 150px; width: auto; max-width: 100%; margin-bottom: 1.1rem; }
+    .about-card {
+      background: linear-gradient(160deg, #243a2f, var(--bg-soft));
+      border: 1px solid var(--line); border-radius: 22px; padding: 1.8rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .about-card h3 {
+      margin-bottom: 1.1rem;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.6rem; font-weight: 400;
+    }
+    .team { display: grid; gap: .8rem; }
+    .person {
+      display: flex; gap: 1rem; align-items: center;
+      background: rgba(15,26,20,.45); border: 1px solid var(--line);
+      border-radius: 14px; padding: .9rem 1rem;
+      transition: border-color .15s ease, background .15s ease;
+    }
+    .person:hover { border-color: rgba(62,207,142,.28); background: rgba(15,26,20,.6); }
+    .avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(145deg, #3ecf8e, #1f6b4a);
+      display: grid; place-items: center; font-weight: 800; color: #062016;
+      flex-shrink: 0;
+    }
+    .person strong { display: block; }
+    .person span { color: var(--muted); font-size: .9rem; }
+
+    /* Compare */
+    .compare {
+      overflow-x: auto; border-radius: var(--radius);
+      border: 1px solid var(--line); background: var(--bg-soft);
+      box-shadow: var(--shadow-soft);
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 640px; }
+    th, td { padding: 1.05rem 1.15rem; text-align: left; border-bottom: 1px solid var(--line); font-size: .95rem; }
+    th { color: var(--muted); font-weight: 600; background: rgba(0,0,0,.2); }
+    td:nth-child(2) { color: var(--accent); font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+
+    /* FAQ */
+    .faq { display: grid; gap: .7rem; max-width: 760px; }
+    details {
+      background: var(--bg-soft); border: 1px solid var(--line);
+      border-radius: 14px; padding: 1.05rem 1.2rem;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    details:hover, details[open] { border-color: rgba(62,207,142,.3); }
+    details[open] { box-shadow: var(--shadow-soft); }
+    summary {
+      cursor: pointer; font-weight: 600; list-style: none;
+      display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+"; color: var(--accent); font-size: 1.35rem; font-weight: 400;
+      line-height: 1; flex-shrink: 0;
+    }
+    details[open] summary::after { content: "–"; }
+    details p { margin-top: .8rem; color: var(--muted); }
+
+    /* CTA */
+    .cta-band {
+      background: linear-gradient(135deg, rgba(31,74,53,.94), rgba(22,53,38,.92) 55%, rgba(15,26,20,.9));
+      border: 1px solid rgba(62,207,142,.25);
+      border-radius: 24px; padding: 3rem 1.75rem; text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .cta-band p { color: var(--muted); margin: .9rem auto 1.5rem; max-width: 34rem; }
+    .cta-band .btn { min-width: 12rem; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 3rem 0 1.5rem;
+      color: var(--muted); font-size: .92rem;
+      background: rgba(10,18,14,.55);
+    }
+    .footer-grid {
+      display: grid; gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 760px) {
+      .footer-grid { grid-template-columns: 1.3fr .9fr .9fr; gap: 2.5rem; align-items: start; }
+    }
+    .footer-brand { display: flex; gap: .9rem; align-items: center; }
+    .footer-logo { height: 84px; width: auto; flex-shrink: 0; }
+    .footer-brand strong { color: var(--text); display: block; font-size: 1.05rem; }
+    .footer-col h3 {
+      color: var(--text); font-size: .78rem; letter-spacing: .08em;
+      text-transform: uppercase; font-weight: 700; margin-bottom: .85rem;
+    }
+    .footer-col a, .footer-col p { display: block; margin-top: .4rem; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      margin-top: 2.2rem; padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: .75rem 1.25rem;
+      justify-content: space-between; align-items: center;
+      font-size: .85rem;
+    }
+    .footer-bottom a:hover { color: var(--text); }
+    .soft-band { background: rgba(22,36,28,.72); border-block: 1px solid var(--line); backdrop-filter: blur(6px); }
+    .bought-grid { display: grid; gap: 1rem; align-items: start; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .bought {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1.45rem; border-top: 3px solid var(--gold);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+    .bought:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(232,197,71,.45); }
+    .bought .tag {
+      display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent); background: rgba(62,207,142,.12);
+      padding: .25rem .6rem; border-radius: 999px;
+    }
+    .bought h3 { margin-top: .8rem; }
+    .bought p { color: var(--muted); margin-top: .35rem; }
+
+    /* Areas we buy + state landing pages */
+    .area-copy { max-width: 760px; }
+    .area-copy p { color: var(--muted); margin-top: 1rem; line-height: 1.7; }
+    .area-copy h2 { margin-top: 2.2rem; }
+    .area-copy ul { color: var(--muted); margin-top: .85rem; padding-left: 1.2rem; }
+    .area-copy li { margin-top: .45rem; line-height: 1.65; }
+    .breadcrumb { color: var(--muted); font-size: .9rem; margin-bottom: .95rem; }
+    .breadcrumb a { color: var(--accent); font-weight: 600; }
+    .breadcrumb span { opacity: .7; }
+    .areas-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .area-card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1.5rem; border-top: 3px solid var(--accent); display: block;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+    .area-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(62,207,142,.4); }
+    .area-card h3 { margin-top: .3rem; }
+    .area-card p { color: var(--muted); margin-top: .45rem; }
+    .area-card .go { display: inline-block; margin-top: .9rem; color: var(--accent); font-weight: 700; font-size: .92rem; }
+    .other-areas { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.1rem; }
+    .other-areas a {
+      display: inline-flex; align-items: center;
+      background: rgba(62,207,142,.12); color: var(--text);
+      border: 1px solid rgba(62,207,142,.25);
+      padding: .55rem 1rem; border-radius: 999px; font-weight: 600; font-size: .92rem;
+      transition: background .15s ease, transform .15s ease;
+    }
+    .other-areas a:hover { background: rgba(62,207,142,.2); transform: translateY(-1px); }
+
+    .county-deal { max-width: 420px; margin-top: 1rem; }
+    .area-copy .hud-link img {
+      width: 100%; margin-top: .8rem; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+    .area-copy .hud-link span {
+      display: block; margin-top: .4rem; font-size: .85rem; color: #7fe0a6;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://sgresolutions.com/sell-land-franklin-county-va/",
+      "url": "https://sgresolutions.com/sell-land-franklin-county-va/",
+      "name": "Sell My Land Fast in Franklin County, VA | SGRE Solutions",
+      "description": "Sell my land fast in Franklin County, VA. We buy land in Rocky Mount, Ferrum, and Boones Mill for cash. No fees, no commissions, no obligation.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "SGRE Solutions",
+        "url": "https://sgresolutions.com/"
+      },
+      "about": {
+        "@id": "https://sgresolutions.com/#business"
+      }
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "RealEstateAgent"
+      ],
+      "@id": "https://sgresolutions.com/#business",
+      "name": "SGRE Solutions LLC",
+      "url": "https://sgresolutions.com/",
+      "image": "https://sgresolutions.com/logo.png",
+      "telephone": "+1-786-382-3874",
+      "email": "sgresolutions1@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Franklin County",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Rocky Mount"
+        },
+        {
+          "@type": "City",
+          "name": "Ferrum"
+        },
+        {
+          "@type": "City",
+          "name": "Boones Mill"
+        }
+      ],
+      "description": "Sell my land fast in Franklin County, VA. We buy land in Rocky Mount, Ferrum, and Boones Mill for cash. No fees, no commissions, no obligation.",
+      "priceRange": "Cash offers on vacant land"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://sgresolutions.com/sell-land-franklin-county-va/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you buy land in Rocky Mount and the rest of Franklin County, Virginia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We buy vacant lots, woods, and rural acreage in and around Rocky Mount, Ferrum, and Boones Mill, and we also look at land in other parts of Franklin County, Virginia, when the property is a fit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you buy land near Smith Mountain Lake as well as inland farms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We look at both. A farm or wooded tract inland, or a lot or small tract toward the lake, can be a fit. Water frontage is not required. Tell us the nearest community and the approximate acreage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I live out of state or inherited the land. Can I still sell?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Inherited land and out-of-state ownership are common in Franklin County. We can work with you remotely and coordinate title and closing through a title company, so you do not have to travel to Rocky Mount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there any fees or commissions if I sell to you?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. There are no commissions or fees from us, and we pay the closing costs. The offer you accept is what you get."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a cash offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fill out the form on this page with the community or parcel and the approximate acreage, or call or text (786) 382-3874. Asking for an offer is free and there is no obligation."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="../">
+        <img class="logo-img" src="../logo-3d-icon.png" alt="SGRE Solutions LLC logo" width="56" height="56">
+        <span>SGRE Solutions</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../#how">How it works</a>
+        <a href="../#about">About</a>
+        <a href="../#areas">Areas we buy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="nav-phone" href="tel:+17863823874" aria-label="Call SGRE Solutions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(786) 382-3874</span>
+      </a>
+      <a class="btn nav-cta" href="#offer">Get a cash offer</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="breadcrumb"><a href="../">Home</a> <span>/</span> <a href="../sell-land-virginia/">Sell land in Virginia</a> <span>/</span> Franklin County</p>
+          <span class="eyebrow"><span class="dot"></span> Franklin County vacant land cash buyers</span>
+          <h1 style="margin-top:.85rem;">Sell Your Land Fast in Franklin County, VA for Cash</h1>
+          <p class="lead">Fair cash offers on farms, woods, and rural lots in Rocky Mount, Ferrum, Boones Mill, and across Franklin County, Virginia. Skip the listing and close when it works for you.</p>
+          <p class="muted" style="margin-top:1rem;">Call or text <a href="tel:+17863823874" style="color:var(--accent);font-weight:600;">(786) 382-3874</a></p>
+          <div class="trust-row">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>No fees</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>No commissions</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Close fast</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Buy as-is</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card" id="offer">
+          <h3>Get your cash offer</h3>
+          <p class="sub">Tell us about the property. We’ll follow up soon, and your information stays private.</p>
+          <form id="lead-form" action="https://formsubmit.co/sgresolutions1@gmail.com" method="post">
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="hidden" name="_subject" value="New land cash-offer request — SGRE Solutions" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="page" id="lead-page" value="" />
+            <input type="hidden" name="source" value="SGRE website" />
+            <div class="form-row two">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" required placeholder="Jane Seller" autocomplete="name" />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required placeholder="(555) 555-5555" autocomplete="tel" />
+              </div>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@email.com" autocomplete="email" />
+            </div>
+            <div>
+              <label for="address">Property address / county</label>
+              <input id="address" name="address" required placeholder="County, state, or parcel / street if you have it" />
+            </div>
+            <div class="form-row two">
+              <div>
+                <label for="acres">Approximate acres</label>
+                <input id="acres" name="acres" placeholder="e.g. 2.5" />
+              </div>
+              <div>
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="asap">ASAP</option>
+                  <option value="30">Within 30 days</option>
+                  <option value="60">Within 60 days</option>
+                  <option value="flexible" selected>Flexible</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="notes">Anything we should know?</label>
+              <textarea id="notes" name="notes" placeholder="Access, taxes, inherited property, or a quick close…"></textarea>
+            </div>
+            <button class="btn" type="submit" style="width:100%;">Request my cash offer</button>
+            <p class="form-error" id="form-error">Something went wrong. Please call or text <a href="tel:+17863823874">(786) 382-3874</a>.</p>
+            <p class="form-note">Free · no obligation · we buy vacant land directly</p>
+          </form>
+          <div class="form-success" id="form-success">
+            <div class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h3>Got it — thanks.</h3>
+            <p class="muted" style="margin-top:.5rem;">We’ll review the property and reach out shortly. No pressure either way.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Franklin County land</span>
+          <h2 style="margin-top:.6rem;">We buy vacant land in Franklin County, VA</h2>
+        </div>
+        <div class="area-copy">
+
+          <p>If you own a vacant lot, a wooded tract, or acreage in Franklin County, and you want to sell it without listing, SGRE Solutions would be glad to make a cash offer. We are a land buyer based in Miami, Florida, and we buy vacant land nationwide, including parcels in this part of the country.</p>
+          <p>Franklin County, Virginia, is in the Piedmont and Blue Ridge foothills southwest of Roanoke. The county seat is Rocky Mount, where property records and taxes are handled. Ferrum, Boones Mill, Union Hall, and the Smith Mountain Lake communities are other places people know, and U.S. 220 is the main north-south road. This is not the city of Franklin in Southampton County; it is a rural county of rolling farms, wooded ridges, and coves that drain toward the Blackwater River and Smith Mountain Lake. Some parcels sit close to Rocky Mount; others are farther out on a state or private road.</p>
+          <h2>Piedmont farms, woods, and lake-country lots</h2>
+          <p>The vacant land we review in Franklin County is often a piece of former farmland, a wooded tract, or a rural lot outside Rocky Mount, Ferrum, or Boones Mill. Toward Smith Mountain Lake, we also see lots and small tracts where the setting is the lake and the woods rather than a farm use. A parcel near the lake is not automatically waterfront, and we review access and usable area as they are. We buy land as-is. You do not need to clear it, timber it, or get a new survey just to request an offer.</p>
+          <p>If you have a parcel number or a road name, that helps. If you only know the town and the approximate acreage, we can still start from there.</p>
+          <p>We look at each parcel on its own facts &mdash; the road, the utilities, the shape of the land, and what similar acreage has sold for nearby. A grown-up tract or a lot without utilities is not automatically a no. Share what you know, and we will tell you whether it is a fit and what we can offer.</p>
+          <h2>Why Franklin County landowners sell</h2>
+          <p>Owners often come to us after inheriting a parcel, after moving away, or after years of paying taxes on land they do not plan to build on or farm. Some tracts have grown up, sit on a private lane, or have questions about access, wetlands, or utilities, which can make a conventional sale slower. We buy land as-is. You do not need to clear the property, timber it, or get a new survey just to request an offer.</p>
+          <p>Requesting an offer is free and comes with no obligation. Tell us the community or parcel if you have it, and the approximate size. We review the land and comparable sales and make a cash offer. We do not charge commissions or seller fees, and we cover closing costs. If the offer works for you, you choose the closing date. If it does not, you can simply say no.</p>
+          <p>To get started, use the form on this page or call or text <a href="tel:+17863823874" style="color:var(--accent);font-weight:600;">(786) 382-3874</a>. Whether the land is near Rocky Mount, Ferrum, or Boones Mill, or elsewhere in Franklin County, we are glad to take a look.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Simple process</span>
+          <h2 style="margin-top:.6rem;">Selling your land takes 3 steps</h2>
+          <p>Straightforward process with a small team that actually buys vacant land.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <h3>Tell us about the property</h3>
+            <p>Fill out the short form or call. We’ll ask a few quick questions about the lot, access, and your timeline.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">2</div>
+            <h3>Get a fair cash offer</h3>
+            <p>We look at nearby land sales and your parcel, then give you a clear cash offer — no pressure and no obligation.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">3</div>
+            <h3>Choose your closing date</h3>
+            <p>Accept only if it works for you. We coordinate title and close when you’re ready.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-band">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> Other areas</span>
+          <h2 style="margin-top:.6rem;">More places we buy land</h2>
+          <p>We buy vacant land nationwide. If your property is not in Franklin County, start here or tell us the county on the form.</p>
+        </div>
+        <div class="other-areas">
+          <a href="../">All areas / home</a>
+          <a href="../sell-land-virginia/">Sell land in Virginia</a>
+          <a href="../sell-land-montgomery-county-va/">Montgomery County (Christiansburg)</a>
+          <a href="../sell-land-appomattox-county-va/">Appomattox County (Appomattox)</a>
+          <a href="../sell-land-arizona/">Sell land in Arizona</a>
+          <a href="../sell-land-florida/">Sell land in Florida</a>
+          <a href="../sell-land-north-carolina/">Sell land in North Carolina</a>
+          <a href="../sell-land-georgia/">Sell land in Georgia</a>
+          <a href="../sell-land-tennessee/">Sell land in Tennessee</a>
+          <a href="../sell-land-alabama/">Sell land in Alabama</a>
+          <a href="../sell-land-california/">Sell land in California</a>
+          <a href="../sell-land-west-virginia/">Sell land in West Virginia</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> FAQ</span>
+          <h2 style="margin-top:.6rem;">Common questions about selling land in Franklin County</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Do you buy land in Rocky Mount and the rest of Franklin County, Virginia?</summary>
+            <p>Yes. We buy vacant lots, woods, and rural acreage in and around Rocky Mount, Ferrum, and Boones Mill, and we also look at land in other parts of Franklin County, Virginia, when the property is a fit.</p>
+          </details>
+          <details>
+            <summary>Do you buy land near Smith Mountain Lake as well as inland farms?</summary>
+            <p>We look at both. A farm or wooded tract inland, or a lot or small tract toward the lake, can be a fit. Water frontage is not required. Tell us the nearest community and the approximate acreage.</p>
+          </details>
+          <details>
+            <summary>I live out of state or inherited the land. Can I still sell?</summary>
+            <p>Yes. Inherited land and out-of-state ownership are common in Franklin County. We can work with you remotely and coordinate title and closing through a title company, so you do not have to travel to Rocky Mount.</p>
+          </details>
+          <details>
+            <summary>Are there any fees or commissions if I sell to you?</summary>
+            <p>No. There are no commissions or fees from us, and we pay the closing costs. The offer you accept is what you get.</p>
+          </details>
+          <details>
+            <summary>How do I get a cash offer?</summary>
+            <p>Fill out the form on this page with the community or parcel and the approximate acreage, or call or text (786) 382-3874. Asking for an offer is free and there is no obligation.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta-band">
+          <h2>Let’s make selling your Franklin County land simple</h2>
+          <p>Whatever the reason and whatever the condition, we’d be glad to take a look. Reach out for a no-obligation cash offer and a closing date that fits your plans.</p>
+          <a class="btn" href="#offer">Get a cash offer</a>
+          <p style="margin:1rem 0 0;">Or call or text <a href="tel:+17863823874" style="color:var(--gold);font-weight:700;">(786) 382-3874</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="../logo-3d-dark.png" alt="SGRE Solutions LLC logo" />
+          <div>
+            <strong>SGRE Solutions LLC</strong>
+            We buy land for cash.<br />
+            Based in Miami, FL. Buying land nationwide.
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <a href="../">Home</a>
+          <a href="tel:+17863823874">(786) 382-3874</a>
+          <a href="mailto:sgresolutions1@gmail.com">sgresolutions1@gmail.com</a>
+          <a href="#offer">Request a cash offer</a>
+        </div>
+        <div class="footer-col">
+          <h3>Areas we buy</h3>
+          <a href="../sell-land-arizona/">Arizona</a>
+          <a href="../sell-land-florida/">Florida</a>
+          <a href="../sell-land-north-carolina/">North Carolina</a>
+          <a href="../sell-land-georgia/">Georgia</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SGRE Solutions LLC</span>
+        <span>Free cash offers on vacant land · no obligation</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Leads are emailed via FormSubmit.co (AJAX) to sgresolutions1@gmail.com.
+    // First submission from a new domain sends Sergio a one-time activation email;
+    // he has to click the confirm link in that inbox before later leads are forwarded.
+    // Optional later: paste a Fusion (HighLevel) inbound webhook URL below so leads
+    // also land in Fusion. A webhook URL only accepts leads; it is not an API key.
+    var FUSION_WEBHOOK_URL = "";
+    var FORMSUBMIT_URL = "https://formsubmit.co/ajax/sgresolutions1@gmail.com";
+    var pageField = document.getElementById("lead-page");
+    if (pageField) pageField.value = location.href;
+    document.getElementById("lead-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var form = this, btn = form.querySelector('button[type="submit"]');
+      var honey = form.querySelector('[name="_honey"]');
+      function done() {
+        form.classList.add("hide");
+        document.getElementById("form-success").classList.add("show");
+      }
+      if (honey && honey.value) { done(); return; }
+      if (pageField) pageField.value = location.href;
+      var data = {};
+      new FormData(form).forEach(function (v, k) {
+        if (k !== "_honey") data[k] = v;
+      });
+      var parts = (data.name || "").trim().split(/\s+/);
+      data.first_name = parts.shift() || "";
+      data.last_name = parts.join(" ");
+      data.source = data.source || "SGRE website";
+      data.page = location.href;
+      function fail() {
+        btn.disabled = false;
+        btn.textContent = "Request my cash offer";
+        document.getElementById("form-error").style.display = "block";
+      }
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+      fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) {
+          if (!res.ok || res.j.success === false || res.j.success === "false") throw new Error("formsubmit");
+          done();
+          if (FUSION_WEBHOOK_URL && FUSION_WEBHOOK_URL.indexOf("http") === 0) {
+            fetch(FUSION_WEBHOOK_URL, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain" },
+              body: JSON.stringify(data)
+            }).catch(function () {});
+          }
+        })
+        .catch(fail);
+    });
+  </script>
+</body>
+</html>
