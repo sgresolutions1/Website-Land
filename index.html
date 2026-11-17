@@ -418,7 +418,7 @@
     }
     .footer-bottom a:hover { color: var(--text); }
     .soft-band { background: rgba(22,36,28,.72); border-block: 1px solid var(--line); backdrop-filter: blur(6px); }
-    .bought-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .bought-grid { display: grid; gap: 1rem; align-items: start; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
     .bought {
       background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
       padding: 1.45rem; border-top: 3px solid var(--gold);
@@ -837,6 +837,7 @@
           <p>Small lots, package deals, and big acreage, all across the country.</p>
         </div>
         <div class="bought-grid">
+          <article class="bought"><span class="tag">Closed Sept 2026</span><h3>2 vacant lots</h3><p>Ocala, FL</p><p>A couple wanted a quick, simple sale. We paid $28,000 cash and covered all of the closing costs.</p><a class="hud-link" href="ocala-hud-purchase.png" target="_blank" rel="noopener"><img src="ocala-hud-purchase.png" alt="Redacted HUD-1 settlement statement for the Ocala, FL purchase, $28,000, closed Sept 14, 2026" loading="lazy" style="width:100%;margin-top:.8rem;border-radius:10px;border:1px solid rgba(255,255,255,.15)"><span style="display:block;margin-top:.4rem;font-size:.85rem;color:#7fe0a6">View the closing statement (names redacted)</span></a></article>
           <article class="bought"><span class="tag">Package deal</span><h3>3-lot package</h3><p>North Port, FL</p></article>
           <article class="bought"><span class="tag">Lot</span><h3>1-acre lot</h3><p>Waycross, GA</p></article>
           <article class="bought"><span class="tag">Acreage</span><h3>40-acre lot</h3><p>Kingman, AZ</p></article>
