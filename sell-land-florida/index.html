@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sell Your Land Fast in Florida for Cash | SGRE Solutions</title>
-  <link rel="canonical" href="https://sgresolutions1.github.io/Website-Land/sell-land-florida/" />
-  <meta name="description" content="Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no agents, no obligation." />
+  <link rel="canonical" href="https://sgresolutions.com/sell-land-florida/" />
+  <meta name="description" content="Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no commissions, no obligation." />
   <meta property="og:title" content="Sell Your Land Fast in Florida for Cash | SGRE Solutions" />
-  <meta property="og:description" content="Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no agents, no obligation." />
-  <meta property="og:url" content="https://sgresolutions1.github.io/Website-Land/sell-land-florida/" />
+  <meta property="og:description" content="Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no commissions, no obligation." />
+  <meta property="og:url" content="https://sgresolutions.com/sell-land-florida/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://sgresolutions1.github.io/Website-Land/logo.png" />
+  <meta property="og:image" content="https://sgresolutions.com/logo.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,9 +28,10 @@
       --accent-dark: #2aa86f;
       --gold: #e8c547;
       --white: #fff;
-      --radius: 16px;
-      --shadow: 0 20px 50px rgba(0,0,0,0.35);
-      --max: 1120px;
+      --radius: 18px;
+      --shadow: 0 22px 50px rgba(0,0,0,0.38);
+      --shadow-soft: 0 10px 28px rgba(0,0,0,0.22);
+      --max: 1140px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -38,8 +39,9 @@
       font-family: "DM Sans", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.55;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
     body::before {
       content: "";
@@ -66,7 +68,7 @@
     .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .8rem; font-weight: 600; letter-spacing: .04em;
+      font-size: .78rem; font-weight: 600; letter-spacing: .08em;
       text-transform: uppercase; color: var(--accent);
     }
     .eyebrow .dot {
@@ -76,199 +78,262 @@
     h1, h2, h3 { line-height: 1.15; font-weight: 700; }
     h1 {
       font-family: "Instrument Serif", Georgia, serif;
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 400; letter-spacing: -0.02em;
+      font-size: clamp(2.6rem, 5.4vw, 4rem);
+      font-weight: 400; letter-spacing: -0.025em;
     }
     h2 {
       font-family: "Instrument Serif", Georgia, serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      font-size: clamp(2rem, 3.6vw, 2.75rem);
       font-weight: 400; letter-spacing: -0.02em;
     }
-    h3 { font-size: 1.15rem; }
+    h3 { font-size: 1.12rem; letter-spacing: -0.01em; }
     .muted { color: var(--muted); }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
       background: var(--accent); color: #062016; font-weight: 700;
-      padding: .9rem 1.35rem; border-radius: 999px; border: none;
-      cursor: pointer; transition: .2s ease; font-size: 1rem;
+      padding: .95rem 1.45rem; border-radius: 999px; border: none;
+      cursor: pointer; transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+      font-size: 1rem; box-shadow: 0 10px 22px rgba(62,207,142,.22);
     }
-    .btn:hover { background: #55dba0; transform: translateY(-1px); }
+    .btn:hover { background: #55dba0; transform: translateY(-1px); box-shadow: 0 14px 28px rgba(62,207,142,.3); }
+    .btn:active { transform: translateY(0); }
+    .btn:disabled { opacity: .7; cursor: not-allowed; transform: none; box-shadow: none; }
     .btn-ghost {
       background: transparent; color: var(--text);
-      border: 1px solid var(--line);
+      border: 1px solid var(--line); box-shadow: none;
     }
-    .btn-ghost:hover { background: rgba(255,255,255,.05); transform: none; }
-    .pill {
-      display: inline-flex; align-items: center; gap: .4rem;
-      background: rgba(62,207,142,.12); color: var(--accent);
-      border: 1px solid rgba(62,207,142,.25);
-      padding: .35rem .7rem; border-radius: 999px; font-size: .85rem; font-weight: 600;
-    }
+    .btn-ghost:hover { background: rgba(255,255,255,.05); transform: none; box-shadow: none; }
 
     /* Nav */
     header {
       position: sticky; top: 0; z-index: 50;
-      backdrop-filter: blur(14px);
-      background: rgba(10,18,14,.72);
+      backdrop-filter: blur(16px);
+      background: rgba(10,18,14,.78);
       border-bottom: 1px solid var(--line);
     }
     .nav {
       display: flex; align-items: center; justify-content: space-between;
-      padding: .9rem 0; gap: 1rem;
+      padding: .85rem 0; gap: .85rem;
     }
     .logo {
       display: flex; align-items: center; gap: .65rem; font-weight: 700;
+      letter-spacing: -0.02em; flex-shrink: 0;
     }
     .logo-img { height: 56px; width: 56px; display: block; }
     @media (max-width: 480px) { .logo-img { height: 44px; width: 44px; } }
-    .logo-mark {
-      width: 36px; height: 36px; border-radius: 10px;
-      background: linear-gradient(145deg, var(--accent), #1a7a52);
-      display: grid; place-items: center; color: #062016; font-weight: 800;
-    }
-    .nav-links { display: flex; gap: 1.25rem; align-items: center; color: var(--muted); font-size: .95rem; }
+    .nav-links { display: flex; gap: 1.2rem; align-items: center; color: var(--muted); font-size: .93rem; }
+    .nav-links a { transition: color .15s ease; }
     .nav-links a:hover { color: var(--text); }
     .nav-cta { display: none; }
+    .nav-phone {
+      color: var(--gold); font-weight: 700; white-space: nowrap; font-size: .95rem;
+      display: inline-flex; align-items: center; gap: .4rem;
+    }
+    .nav-phone svg { width: 16px; height: 16px; flex-shrink: 0; }
     @media (min-width: 800px) {
       .nav-cta { display: inline-flex; }
       .nav-links { display: flex; }
     }
     @media (max-width: 799px) {
       .nav-links { display: none; }
-      .nav-cta { display: inline-flex; padding: .65rem 1rem; font-size: .9rem; }
+      .nav-cta { display: inline-flex; padding: .65rem 1rem; font-size: .88rem; }
+    }
+    @media (max-width: 640px) {
+      .nav-phone span { display: none; }
+      .nav-phone { font-size: 1.05rem; }
     }
 
     /* Hero */
     .hero {
-      position: relative; padding: 3.5rem 0 4rem; overflow: hidden;
-    }
-    .hero {
+      position: relative; padding: 4.25rem 0 4.5rem; overflow: hidden;
       background:
-        linear-gradient(105deg, rgba(10,18,14,.78) 0%, rgba(10,18,14,.55) 48%, rgba(10,18,14,.35) 100%),
+        linear-gradient(105deg, rgba(10,18,14,.82) 0%, rgba(10,18,14,.58) 48%, rgba(10,18,14,.38) 100%),
         url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80")
           center 40% / cover no-repeat;
       border-bottom: 1px solid var(--line);
     }
-    .hero::before { display: none; }
     .hero-grid {
       position: relative;
-      display: grid; gap: 2.5rem; align-items: start;
+      display: grid; gap: 2.75rem; align-items: start;
     }
     @media (min-width: 920px) {
-      .hero-grid { grid-template-columns: 1.1fr .9fr; gap: 3rem; }
+      .hero-grid { grid-template-columns: 1.08fr .92fr; gap: 3.25rem; align-items: center; }
     }
     .hero-copy p.lead {
-      margin-top: 1rem; font-size: 1.15rem; color: var(--muted); max-width: 36rem;
+      margin-top: 1.1rem; font-size: 1.18rem; color: var(--muted); max-width: 36rem; line-height: 1.65;
     }
+    .hero-phone { margin-top: 1.05rem; }
+    .hero-phone a { color: var(--accent); font-weight: 600; }
+
     .trust-row {
-      display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.35rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .7rem;
+      margin-top: 1.85rem;
     }
-    .stat-row {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem;
-      margin-top: 1.75rem;
+    @media (min-width: 640px) {
+      .trust-row { grid-template-columns: repeat(4, 1fr); }
     }
-    .stat {
-      background: rgba(255,255,255,.03); border: 1px solid var(--line);
-      border-radius: 14px; padding: 1rem; text-align: center;
+    .trust-item {
+      display: flex; flex-direction: column; align-items: flex-start; gap: .45rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: .9rem .85rem;
+      font-weight: 600;
+      font-size: .88rem;
+      line-height: 1.3;
+      box-shadow: var(--shadow-soft);
     }
-    .stat strong {
-      display: block; font-size: 1.45rem; color: var(--accent);
-      font-family: "Instrument Serif", Georgia, serif;
-    }
-    .stat span { font-size: .8rem; color: var(--muted); }
+    .trust-item svg { color: var(--accent); width: 20px; height: 20px; }
+    .trust-item span { color: var(--text); }
 
     /* Form card */
     .form-card {
-      background: linear-gradient(180deg, rgba(32,54,42,.94), rgba(28,46,36,.96));
-      border: 1px solid rgba(62,207,142,.2);
-      border-radius: 22px; padding: 1.5rem; box-shadow: var(--shadow);
+      background: linear-gradient(180deg, rgba(34,56,44,.96), rgba(24,40,32,.98));
+      border: 1px solid rgba(62,207,142,.22);
+      border-radius: 24px;
+      padding: 1.7rem 1.55rem 1.5rem;
+      box-shadow: var(--shadow);
+      position: relative;
     }
-    .form-card h3 { margin-bottom: .25rem; }
-    .form-card .sub { color: var(--muted); font-size: .92rem; margin-bottom: 1.1rem; }
-    form { display: grid; gap: .75rem; }
-    label { font-size: .8rem; font-weight: 600; color: var(--muted); display: block; margin-bottom: .3rem; }
+    .form-card::before {
+      content: "";
+      position: absolute; left: 1.4rem; right: 1.4rem; top: 0; height: 3px;
+      border-radius: 0 0 3px 3px;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+    .form-card h3 {
+      margin-bottom: .3rem;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.7rem; font-weight: 400; letter-spacing: -0.02em;
+    }
+    .form-card .sub { color: var(--muted); font-size: .94rem; margin-bottom: 1.2rem; }
+    form { display: grid; gap: .8rem; }
+    label { font-size: .8rem; font-weight: 600; color: var(--muted); display: block; margin-bottom: .35rem; }
     input, select, textarea {
-      width: 100%; background: rgba(0,0,0,.25); border: 1px solid var(--line);
-      color: var(--text); border-radius: 12px; padding: .8rem .9rem; font: inherit;
-      outline: none; transition: border-color .15s;
+      width: 100%; background: rgba(0,0,0,.28); border: 1px solid var(--line);
+      color: var(--text); border-radius: 12px; padding: .85rem .95rem; font: inherit;
+      outline: none; transition: border-color .15s ease, box-shadow .15s ease;
     }
-    input:focus, select:focus, textarea:focus { border-color: var(--accent); }
-    textarea { min-height: 88px; resize: vertical; }
-    .form-row { display: grid; gap: .75rem; }
+    input::placeholder, textarea::placeholder { color: rgba(168,183,174,.62); }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(62,207,142,.18);
+    }
+    option { background: #1c2e24; color: var(--text); }
+    textarea { min-height: 92px; resize: vertical; }
+    .form-row { display: grid; gap: .8rem; }
     @media (min-width: 560px) { .form-row.two { grid-template-columns: 1fr 1fr; } }
-    .form-note { font-size: .78rem; color: var(--muted); text-align: center; margin-top: .25rem; }
+    .form-note { font-size: .78rem; color: var(--muted); text-align: center; margin-top: .15rem; }
     .form-success {
-      display: none; text-align: center; padding: 1.5rem .5rem;
+      display: none; text-align: center; padding: 1.7rem .5rem;
     }
     .form-success.show { display: block; }
+    .form-success .check {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(62,207,142,.14); color: var(--accent);
+      display: grid; place-items: center; margin: 0 auto .85rem;
+    }
     form.hide { display: none; }
+    .form-error { display: none; color: #ffb4a8; font-size: .85rem; text-align: center; margin-top: .15rem; }
+    .form-error a { color: var(--gold); font-weight: 600; }
+    .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px; height: 1px; overflow: hidden;
+    }
 
-    section { padding: 4rem 0; }
-    .section-head { max-width: 40rem; margin-bottom: 2rem; }
-    .section-head p { margin-top: .75rem; color: var(--muted); }
+    section { padding: 4.75rem 0; }
+    .section-head { max-width: 40rem; margin-bottom: 2.15rem; }
+    .section-head h2 { margin-top: .65rem; }
+    .section-head p { margin-top: .8rem; color: var(--muted); }
 
     /* Benefits */
     .benefits {
-      display: grid; gap: 1rem;
+      display: grid; gap: 1.1rem;
       grid-template-columns: 1fr;
     }
     @media (min-width: 700px) { .benefits { grid-template-columns: repeat(3, 1fr); } }
     .benefit {
-      background: rgba(22,36,28,.78); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1.35rem; backdrop-filter: blur(8px);
-    }
-    .benefit .icon {
-      width: 42px; height: 42px; border-radius: 12px;
-      background: rgba(62,207,142,.12); color: var(--accent);
-      display: grid; place-items: center; margin-bottom: .9rem; font-size: 1.2rem;
-    }
-    .benefit p { color: var(--muted); margin-top: .45rem; font-size: .95rem; }
-
-    /* Steps */
-    .steps {
-      display: grid; gap: 1rem;
-    }
-    @media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); } }
-    .step {
-      position: relative;
-      background: rgba(28,46,36,.82); border: 1px solid var(--line);
+      background: rgba(22,36,28,.82); border: 1px solid var(--line);
       border-radius: var(--radius); padding: 1.5rem; backdrop-filter: blur(8px);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
     }
-    .step-num {
-      width: 2rem; height: 2rem; border-radius: 50%;
-      background: var(--accent); color: #062016; font-weight: 800;
+    .benefit:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(62,207,142,.3); }
+    .benefit .icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(62,207,142,.12); color: var(--accent);
       display: grid; place-items: center; margin-bottom: 1rem;
     }
-    .step p { color: var(--muted); margin-top: .5rem; font-size: .95rem; }
+    .benefit .icon svg { width: 22px; height: 22px; }
+    .benefit p { color: var(--muted); margin-top: .5rem; font-size: .96rem; }
+
+    /* Steps */
+    .steps { display: grid; gap: 1.1rem; position: relative; }
+    @media (min-width: 800px) {
+      .steps { grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+      .steps::before {
+        content: "";
+        position: absolute;
+        top: 1.7rem;
+        left: 14%;
+        right: 14%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(62,207,142,.4), transparent);
+        z-index: 0;
+      }
+    }
+    .step {
+      position: relative; z-index: 1;
+      background: rgba(28,46,36,.88); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.6rem 1.45rem; backdrop-filter: blur(8px);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+    .step:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(62,207,142,.3); }
+    .step-num {
+      width: 2.15rem; height: 2.15rem; border-radius: 50%;
+      background: var(--accent); color: #062016; font-weight: 800;
+      display: grid; place-items: center; margin-bottom: 1.05rem;
+      box-shadow: 0 0 0 6px rgba(15,26,20,.9), 0 8px 16px rgba(62,207,142,.25);
+    }
+    .step p { color: var(--muted); margin-top: .55rem; font-size: .96rem; }
 
     /* Situations */
-    .chips {
-      display: flex; flex-wrap: wrap; gap: .6rem;
-    }
+    .chips { display: flex; flex-wrap: wrap; gap: .6rem; }
     .chip {
       background: rgba(255,255,255,.04); border: 1px solid var(--line);
       border-radius: 999px; padding: .55rem 1rem; font-size: .92rem; color: var(--muted);
+      transition: border-color .15s ease, color .15s ease, background .15s ease;
     }
+    .chip:hover { border-color: rgba(62,207,142,.3); color: var(--text); background: rgba(62,207,142,.08); }
 
     /* About / team */
-    .about-grid {
-      display: grid; gap: 2rem; align-items: start;
-    }
+    .about-grid { display: grid; gap: 2.2rem; align-items: start; }
     @media (min-width: 860px) {
       .about-grid { grid-template-columns: 1.1fr .9fr; }
     }
+    .about-logo { display: block; height: 150px; width: auto; max-width: 100%; margin-bottom: 1.1rem; }
     .about-card {
       background: linear-gradient(160deg, #243a2f, var(--bg-soft));
-      border: 1px solid var(--line); border-radius: 22px; padding: 1.75rem;
+      border: 1px solid var(--line); border-radius: 22px; padding: 1.8rem 1.6rem;
+      box-shadow: var(--shadow-soft);
     }
-    .team {
-      display: grid; gap: .85rem;
+    .about-card h3 {
+      margin-bottom: 1.1rem;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.6rem; font-weight: 400;
     }
+    .team { display: grid; gap: .8rem; }
     .person {
       display: flex; gap: 1rem; align-items: center;
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: 14px; padding: 1rem;
+      background: rgba(15,26,20,.45); border: 1px solid var(--line);
+      border-radius: 14px; padding: .9rem 1rem;
+      transition: border-color .15s ease, background .15s ease;
     }
+    .person:hover { border-color: rgba(62,207,142,.28); background: rgba(15,26,20,.6); }
     .avatar {
       width: 48px; height: 48px; border-radius: 50%;
       background: linear-gradient(145deg, #3ecf8e, #1f6b4a);
@@ -282,53 +347,91 @@
     .compare {
       overflow-x: auto; border-radius: var(--radius);
       border: 1px solid var(--line); background: var(--bg-soft);
+      box-shadow: var(--shadow-soft);
     }
     table { width: 100%; border-collapse: collapse; min-width: 640px; }
-    th, td { padding: 1rem 1.1rem; text-align: left; border-bottom: 1px solid var(--line); font-size: .95rem; }
+    th, td { padding: 1.05rem 1.15rem; text-align: left; border-bottom: 1px solid var(--line); font-size: .95rem; }
     th { color: var(--muted); font-weight: 600; background: rgba(0,0,0,.2); }
     td:nth-child(2) { color: var(--accent); font-weight: 600; }
     tr:last-child td { border-bottom: none; }
 
     /* FAQ */
-    .faq { display: grid; gap: .75rem; max-width: 760px; }
+    .faq { display: grid; gap: .7rem; max-width: 760px; }
     details {
       background: var(--bg-soft); border: 1px solid var(--line);
-      border-radius: 14px; padding: 1rem 1.15rem;
+      border-radius: 14px; padding: 1.05rem 1.2rem;
+      transition: border-color .15s ease, box-shadow .15s ease;
     }
+    details:hover, details[open] { border-color: rgba(62,207,142,.3); }
+    details[open] { box-shadow: var(--shadow-soft); }
     summary {
       cursor: pointer; font-weight: 600; list-style: none;
       display: flex; justify-content: space-between; gap: 1rem; align-items: center;
     }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; color: var(--accent); font-size: 1.3rem; font-weight: 400; }
+    summary::after {
+      content: "+"; color: var(--accent); font-size: 1.35rem; font-weight: 400;
+      line-height: 1; flex-shrink: 0;
+    }
     details[open] summary::after { content: "–"; }
-    details p { margin-top: .75rem; color: var(--muted); }
+    details p { margin-top: .8rem; color: var(--muted); }
 
     /* CTA */
     .cta-band {
-      background: linear-gradient(135deg, rgba(31,74,53,.92), rgba(22,53,38,.9) 55%, rgba(15,26,20,.88));
+      background: linear-gradient(135deg, rgba(31,74,53,.94), rgba(22,53,38,.92) 55%, rgba(15,26,20,.9));
       border: 1px solid rgba(62,207,142,.25);
-      border-radius: 24px; padding: 2.5rem 1.75rem; text-align: center;
+      border-radius: 24px; padding: 3rem 1.75rem; text-align: center;
+      box-shadow: var(--shadow);
     }
-    .cta-band p { color: var(--muted); margin: .85rem auto 1.4rem; max-width: 34rem; }
+    .cta-band p { color: var(--muted); margin: .9rem auto 1.5rem; max-width: 34rem; }
+    .cta-band .btn { min-width: 12rem; }
 
     footer {
-      border-top: 1px solid var(--line); padding: 2rem 0 2.5rem;
-      color: var(--muted); font-size: .9rem;
+      border-top: 1px solid var(--line);
+      padding: 3rem 0 1.5rem;
+      color: var(--muted); font-size: .92rem;
+      background: rgba(10,18,14,.55);
     }
-    .footer-row {
-      display: flex; flex-wrap: wrap; gap: 1rem;
+    .footer-grid {
+      display: grid; gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 760px) {
+      .footer-grid { grid-template-columns: 1.3fr .9fr .9fr; gap: 2.5rem; align-items: start; }
+    }
+    .footer-brand { display: flex; gap: .9rem; align-items: center; }
+    .footer-logo { height: 84px; width: auto; flex-shrink: 0; }
+    .footer-brand strong { color: var(--text); display: block; font-size: 1.05rem; }
+    .footer-col h3 {
+      color: var(--text); font-size: .78rem; letter-spacing: .08em;
+      text-transform: uppercase; font-weight: 700; margin-bottom: .85rem;
+    }
+    .footer-col a, .footer-col p { display: block; margin-top: .4rem; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      margin-top: 2.2rem; padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: .75rem 1.25rem;
       justify-content: space-between; align-items: center;
+      font-size: .85rem;
     }
+    .footer-bottom a:hover { color: var(--text); }
     .soft-band { background: rgba(22,36,28,.72); border-block: 1px solid var(--line); backdrop-filter: blur(6px); }
-    .nav-phone { color: var(--gold); font-weight: 700; white-space: nowrap; font-size: .95rem; }
-    @media (max-width: 640px) { .nav-phone span { display: none; } .nav-phone { font-size: 1.3rem; } }
     .bought-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-    .bought { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; border-top: 3px solid var(--gold); }
-    .bought .tag { display:inline-block; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color: var(--accent); background: rgba(62,207,142,.12); padding:.25rem .6rem; border-radius:999px; }
-    .bought h3 { margin-top: .75rem; }
+    .bought {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1.45rem; border-top: 3px solid var(--gold);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+    .bought:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(232,197,71,.45); }
+    .bought .tag {
+      display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent); background: rgba(62,207,142,.12);
+      padding: .25rem .6rem; border-radius: 999px;
+    }
+    .bought h3 { margin-top: .8rem; }
     .bought p { color: var(--muted); margin-top: .35rem; }
-    .form-error { display:none; color:#ffb4a8; font-size:.85rem; text-align:center; margin-top:.5rem; }
 
     /* Areas we buy + state landing pages */
     .area-copy { max-width: 760px; }
@@ -336,55 +439,29 @@
     .area-copy h2 { margin-top: 2.2rem; }
     .area-copy ul { color: var(--muted); margin-top: .85rem; padding-left: 1.2rem; }
     .area-copy li { margin-top: .45rem; line-height: 1.65; }
-    .breadcrumb { color: var(--muted); font-size: .9rem; margin-bottom: .85rem; }
+    .breadcrumb { color: var(--muted); font-size: .9rem; margin-bottom: .95rem; }
     .breadcrumb a { color: var(--accent); font-weight: 600; }
     .breadcrumb span { opacity: .7; }
-    .areas-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .areas-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
     .area-card {
       background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 1.4rem; border-top: 3px solid var(--accent); display: block;
-      transition: .2s ease;
+      padding: 1.5rem; border-top: 3px solid var(--accent); display: block;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: var(--shadow-soft);
     }
-    .area-card:hover { transform: translateY(-2px); border-color: rgba(62,207,142,.4); }
-    .area-card h3 { margin-top: .15rem; }
-    .area-card p { color: var(--muted); margin-top: .4rem; }
-    .area-card .go { display: inline-block; margin-top: .85rem; color: var(--accent); font-weight: 700; font-size: .92rem; }
+    .area-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(62,207,142,.4); }
+    .area-card h3 { margin-top: .3rem; }
+    .area-card p { color: var(--muted); margin-top: .45rem; }
+    .area-card .go { display: inline-block; margin-top: .9rem; color: var(--accent); font-weight: 700; font-size: .92rem; }
     .other-areas { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.1rem; }
     .other-areas a {
       display: inline-flex; align-items: center;
       background: rgba(62,207,142,.12); color: var(--text);
       border: 1px solid rgba(62,207,142,.25);
       padding: .55rem 1rem; border-radius: 999px; font-weight: 600; font-size: .92rem;
+      transition: background .15s ease, transform .15s ease;
     }
-    .other-areas a:hover { background: rgba(62,207,142,.2); }
-  
-    /* Areas we buy + state landing pages */
-    .area-copy { max-width: 760px; }
-    .area-copy p { color: var(--muted); margin-top: 1rem; line-height: 1.7; }
-    .area-copy h2 { margin-top: 2.2rem; }
-    .area-copy ul { color: var(--muted); margin-top: .85rem; padding-left: 1.2rem; }
-    .area-copy li { margin-top: .45rem; line-height: 1.65; }
-    .breadcrumb { color: var(--muted); font-size: .9rem; margin-bottom: .85rem; }
-    .breadcrumb a { color: var(--accent); font-weight: 600; }
-    .breadcrumb span { opacity: .7; }
-    .areas-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-    .area-card {
-      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-      padding: 1.4rem; border-top: 3px solid var(--accent); display: block;
-      transition: .2s ease;
-    }
-    .area-card:hover { transform: translateY(-2px); border-color: rgba(62,207,142,.4); }
-    .area-card h3 { margin-top: .15rem; }
-    .area-card p { color: var(--muted); margin-top: .4rem; }
-    .area-card .go { display: inline-block; margin-top: .85rem; color: var(--accent); font-weight: 700; font-size: .92rem; }
-    .other-areas { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.1rem; }
-    .other-areas a {
-      display: inline-flex; align-items: center;
-      background: rgba(62,207,142,.12); color: var(--text);
-      border: 1px solid rgba(62,207,142,.25);
-      padding: .55rem 1rem; border-radius: 999px; font-weight: 600; font-size: .92rem;
-    }
-    .other-areas a:hover { background: rgba(62,207,142,.2); }
+    .other-areas a:hover { background: rgba(62,207,142,.2); transform: translateY(-1px); }
   </style>
   <script type="application/ld+json">
 {
@@ -392,25 +469,25 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://sgresolutions1.github.io/Website-Land/sell-land-florida/",
-      "url": "https://sgresolutions1.github.io/Website-Land/sell-land-florida/",
+      "@id": "https://sgresolutions.com/sell-land-florida/",
+      "url": "https://sgresolutions.com/sell-land-florida/",
       "name": "Sell Your Land Fast in Florida for Cash | SGRE Solutions",
-      "description": "Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no agents, no obligation.",
+      "description": "Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no commissions, no obligation.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "SGRE Solutions",
-        "url": "https://sgresolutions1.github.io/Website-Land/"
+        "url": "https://sgresolutions.com/"
       },
       "about": {
-        "@id": "https://sgresolutions1.github.io/Website-Land/#business"
+        "@id": "https://sgresolutions.com/#business"
       }
     },
     {
       "@type": "RealEstateAgent",
-      "@id": "https://sgresolutions1.github.io/Website-Land/#business",
+      "@id": "https://sgresolutions.com/#business",
       "name": "SGRE Solutions LLC",
-      "url": "https://sgresolutions1.github.io/Website-Land/",
-      "image": "https://sgresolutions1.github.io/Website-Land/logo.png",
+      "url": "https://sgresolutions.com/",
+      "image": "https://sgresolutions.com/logo.png",
       "telephone": "+1-786-382-3874",
       "email": "sgresolutions1@gmail.com",
       "address": {
@@ -441,12 +518,12 @@
           "name": "Marion County"
         }
       ],
-      "description": "Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no agents, no obligation.",
+      "description": "Sell vacant land in Florida for a fair cash offer. SGRE Solutions, based in Miami, buys lots and acreage as-is across Florida. No fees, no commissions, no obligation.",
       "priceRange": "Cash offers on vacant land"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://sgresolutions1.github.io/Website-Land/sell-land-florida/#faq",
+      "@id": "https://sgresolutions.com/sell-land-florida/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -469,7 +546,7 @@
           "name": "What if the lot has wetlands, drainage or access issues?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We buy land as-is. Wetlands, drainage questions, overgrown lots or limited access do not automatically rule a property out. Share what you know on the form and we will review it."
+            "text": "We buy land as-is. Wetlands, drainage questions, overgrown lots, or limited access do not automatically rule a property out. Share what you know on the form and we will review it."
           }
         },
         {
@@ -507,7 +584,10 @@
         <a href="../#areas">Areas we buy</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="nav-phone" href="tel:+17863823874" aria-label="Call SGRE Solutions">📞 <span>(786) 382-3874</span></a>
+      <a class="nav-phone" href="tel:+17863823874" aria-label="Call SGRE Solutions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(786) 382-3874</span>
+      </a>
       <a class="btn nav-cta" href="#offer">Get a cash offer</a>
     </div>
   </header>
@@ -519,25 +599,38 @@
           <p class="breadcrumb"><a href="../">Home</a> <span>/</span> Sell land in Florida</p>
           <span class="eyebrow"><span class="dot"></span> Florida vacant land cash buyers</span>
           <h1 style="margin-top:.85rem;">Sell Your Land Fast in Florida for Cash</h1>
-          <p class="lead">Fair cash offers on vacant lots and acreage across Florida. Skip the listing, showings and waiting — close when it works for you.</p>
+          <p class="lead">Fair cash offers on vacant lots and acreage across Florida. Skip the listing, showings, and waiting — close when it works for you.</p>
           <p class="muted" style="margin-top:1rem;">Call or text <a href="tel:+17863823874" style="color:var(--accent);font-weight:600;">(786) 382-3874</a></p>
           <div class="trust-row">
-            <span class="pill">No fees</span>
-            <span class="pill">As-is</span>
-            <span class="pill">Your timeline</span>
-            <span class="pill">No obligation</span>
-          </div>
-          <div class="stat-row">
-            <div class="stat"><strong>$0</strong><span>Agent fees</span></div>
-            <div class="stat"><strong>As-is</strong><span>Any condition</span></div>
-            <div class="stat"><strong>Cash</strong><span>No financing risk</span></div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>No fees</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>No commissions</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Close fast</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Buy as-is</span>
+            </div>
           </div>
         </div>
 
         <div class="form-card" id="offer">
           <h3>Get your cash offer</h3>
-          <p class="sub">Tell us about the property. A local buyer will follow up soon. Your info stays private.</p>
-          <form id="lead-form" action="#" method="post">
+          <p class="sub">Tell us about the property. We’ll follow up soon, and your information stays private.</p>
+          <form id="lead-form" action="https://formsubmit.co/sgresolutions1@gmail.com" method="post">
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="hidden" name="_subject" value="New land cash-offer request — SGRE Solutions" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="page" id="lead-page" value="" />
+            <input type="hidden" name="source" value="SGRE website" />
             <div class="form-row two">
               <div>
                 <label for="name">Full name</label>
@@ -558,7 +651,7 @@
             </div>
             <div class="form-row two">
               <div>
-                <label for="acres">Approx. acres</label>
+                <label for="acres">Approximate acres</label>
                 <input id="acres" name="acres" placeholder="e.g. 2.5" />
               </div>
               <div>
@@ -573,14 +666,16 @@
             </div>
             <div>
               <label for="notes">Anything we should know?</label>
-              <textarea id="notes" name="notes" placeholder="Access, taxes, inherited, wanting a quick close…"></textarea>
+              <textarea id="notes" name="notes" placeholder="Access, taxes, inherited property, or a quick close…"></textarea>
             </div>
             <button class="btn" type="submit" style="width:100%;">Request my cash offer</button>
             <p class="form-error" id="form-error">Something went wrong. Please call or text <a href="tel:+17863823874">(786) 382-3874</a>.</p>
             <p class="form-note">Free · no obligation · we buy vacant land directly</p>
           </form>
           <div class="form-success" id="form-success">
-            <div style="font-size:2rem;margin-bottom:.5rem;">✓</div>
+            <div class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
             <h3>Got it — thanks.</h3>
             <p class="muted" style="margin-top:.5rem;">We’ll review the property and reach out shortly. No pressure either way.</p>
           </div>
@@ -596,12 +691,12 @@
         </div>
         <div class="area-copy">
 
-          <p>SGRE Solutions is based in Miami, and we buy vacant land throughout Florida, not just in South Florida. If you own a lot or acreage you no longer want, you can ask us for a cash offer and skip a traditional listing, showings and agent fees.</p>
-          <p>Florida has a long history of platted lots and inland parcels that were sold to buyers around the country and never built on. On the Gulf Coast, that includes Sarasota County communities such as North Port, Venice and Englewood. In Southwest Florida, Lee County areas like Lehigh Acres and Cape Coral also have many recorded residential lots. Inland, we look at land in Central Florida counties such as Polk, Highlands, Hardee, DeSoto and Okeechobee, where you will find a mix of lots, former agricultural land and rural acreage. Along the Nature Coast and in the northern part of the peninsula, counties such as Citrus, Hernando, Marion, Columbia and Suwannee have wooded tracts and rural parcels around towns like Ocala and Lake City. We also consider vacant land in the Panhandle and in other parts of the state when the property is a fit.</p>
+          <p>SGRE Solutions is based in Miami, and we buy vacant land throughout Florida, not just in South Florida. If you own a lot or acreage you no longer want, you can ask us for a cash offer and skip a traditional listing, showings, and agent fees.</p>
+          <p>Florida has a long history of platted lots and inland parcels that were sold to buyers around the country and never built on. On the Gulf Coast, that includes Sarasota County communities such as North Port, Venice, and Englewood. In Southwest Florida, Lee County areas like Lehigh Acres and Cape Coral also have many recorded residential lots. Inland, we look at land in Central Florida counties such as Polk, Highlands, Hardee, DeSoto, and Okeechobee, where you will find a mix of lots, former agricultural land and rural acreage. Along the Nature Coast and in the northern part of the peninsula, counties such as Citrus, Hernando, Marion, Columbia, and Suwannee have wooded tracts and rural parcels around towns like Ocala and Lake City. We also consider vacant land in the Panhandle and in other parts of the state when the property is a fit.</p>
           <h2>Selling a Florida lot without listing it</h2>
           <p>Owners often come to us after inheriting a Florida lot, after moving out of state, or after years of paying taxes or association fees on land they do not plan to build on. Some parcels have wetlands, drainage questions, overgrown vegetation or limited road access, which can make a conventional sale slower. We buy land as-is. You do not need to clear the lot, fill anything in, or get a survey just to get an offer.</p>
           <p>Requesting an offer is free and comes with no obligation. Tell us the county, the subdivision or parcel if you have it, and the approximate size. We review the land and comparable sales and make a cash offer. We do not charge commissions or seller fees, and we cover closing costs. If the offer works for you, you choose the closing date. If it does not, you can simply say no.</p>
-          <p>To get started, use the form on this page or call or text <a href="tel:+17863823874" style="color:var(--accent);font-weight:600;">(786) 382-3874</a>. Whether the land is in North Port, Lehigh Acres, the Florida Heartland, North Florida or another county, we are glad to take a look.</p>
+          <p>To get started, use the form on this page or call or text <a href="tel:+17863823874" style="color:var(--accent);font-weight:600;">(786) 382-3874</a>. Whether the land is in North Port, Lehigh Acres, the Florida Heartland, North Florida, or another county, we are glad to take a look.</p>
           <h2>Counties and areas we look at</h2>
           <ul>
             <li>Sarasota County (North Port, Venice, Englewood)</li>
@@ -630,7 +725,7 @@
           <article class="step">
             <div class="step-num">2</div>
             <h3>Get a fair cash offer</h3>
-            <p>We review comps and the parcel, then give you a clear cash offer — no pressure and no obligation.</p>
+            <p>We look at nearby land sales and your parcel, then give you a clear cash offer — no pressure and no obligation.</p>
           </article>
           <article class="step">
             <div class="step-num">3</div>
@@ -674,7 +769,7 @@
           </details>
           <details>
             <summary>What if the lot has wetlands, drainage or access issues?</summary>
-            <p>We buy land as-is. Wetlands, drainage questions, overgrown lots or limited access do not automatically rule a property out. Share what you know on the form and we will review it.</p>
+            <p>We buy land as-is. Wetlands, drainage questions, overgrown lots, or limited access do not automatically rule a property out. Share what you know on the form and we will review it.</p>
           </details>
           <details>
             <summary>Are there any fees or commissions?</summary>
@@ -693,7 +788,7 @@
         <div class="cta-band">
           <h2>Let’s make selling your Florida land simple</h2>
           <p>Whatever the reason and whatever the condition, we’d be glad to take a look. Reach out for a no-obligation cash offer and a closing date that fits your plans.</p>
-          <a class="btn" href="#offer">Get my cash offer</a>
+          <a class="btn" href="#offer">Get a cash offer</a>
           <p style="margin:1rem 0 0;">Or call or text <a href="tel:+17863823874" style="color:var(--gold);font-weight:700;">(786) 382-3874</a></p>
         </div>
       </div>
@@ -701,47 +796,92 @@
   </main>
 
   <footer>
-    <div class="wrap footer-row">
-      <div style="display:flex;gap:.75rem;align-items:center;">
-        <img src="../logo-3d-dark.png" alt="SGRE Solutions LLC logo" style="height:110px;width:auto;flex-shrink:0;" />
-        <div>
-          <strong style="color:var(--text);">SGRE Solutions LLC</strong><br />
-          We buy land for cash. Based in Miami, FL. Buying land nationwide.
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="../logo-3d-dark.png" alt="SGRE Solutions LLC logo" />
+          <div>
+            <strong>SGRE Solutions LLC</strong>
+            We buy land for cash.<br />
+            Based in Miami, FL. Buying land nationwide.
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <a href="../">Home</a>
+          <a href="tel:+17863823874">(786) 382-3874</a>
+          <a href="mailto:sgresolutions1@gmail.com">sgresolutions1@gmail.com</a>
+          <a href="#offer">Request a cash offer</a>
+        </div>
+        <div class="footer-col">
+          <h3>Areas we buy</h3>
+          <a href="../sell-land-arizona/">Arizona</a>
+          <a href="../sell-land-florida/">Florida</a>
+          <a href="../sell-land-north-carolina/">North Carolina</a>
+          <a href="../sell-land-georgia/">Georgia</a>
         </div>
       </div>
-      <div>
-        <a href="../">Home</a>
-        &nbsp;·&nbsp;
-        <a href="tel:+17863823874">(786) 382-3874</a>
-        &nbsp;·&nbsp;
-        <a href="mailto:sgresolutions1@gmail.com">sgresolutions1@gmail.com</a>
-        &nbsp;·&nbsp;
-        <a href="#offer">Request an offer</a><br />
-        <a href="../sell-land-arizona/">Arizona</a> ·
-        <a href="../sell-land-florida/">Florida</a> ·
-        <a href="../sell-land-north-carolina/">North Carolina</a> ·
-        <a href="../sell-land-georgia/">Georgia</a>
+      <div class="footer-bottom">
+        <span>© 2026 SGRE Solutions LLC</span>
+        <span>Free cash offers on vacant land · no obligation</span>
       </div>
     </div>
   </footer>
 
   <script>
-    // Fusion (HighLevel) inbound webhook URL. Placeholder until Sergio approves the Fusion workflow.
-    // A webhook URL only accepts leads; it is not an API key, so it is safe in public HTML.
-    var FUSION_WEBHOOK_URL = "PASTE_FUSION_INBOUND_WEBHOOK_URL_HERE";
+    // Leads are emailed via FormSubmit.co (AJAX) to sgresolutions1@gmail.com.
+    // First submission from a new domain sends Sergio a one-time activation email;
+    // he has to click the confirm link in that inbox before later leads are forwarded.
+    // Optional later: paste a Fusion (HighLevel) inbound webhook URL below so leads
+    // also land in Fusion. A webhook URL only accepts leads; it is not an API key.
+    var FUSION_WEBHOOK_URL = "";
+    var FORMSUBMIT_URL = "https://formsubmit.co/ajax/sgresolutions1@gmail.com";
+    var pageField = document.getElementById("lead-page");
+    if (pageField) pageField.value = location.href;
     document.getElementById("lead-form").addEventListener("submit", function (e) {
       e.preventDefault();
       var form = this, btn = form.querySelector('button[type="submit"]');
-      var data = Object.fromEntries(new FormData(form).entries());
-      var parts = data.name.trim().split(/\s+/);
-      data.first_name = parts.shift(); data.last_name = parts.join(" ");
-      data.source = "SGRE website"; data.page = location.href;
-      function done() { form.classList.add("hide"); document.getElementById("form-success").classList.add("show"); }
-      if (FUSION_WEBHOOK_URL.indexOf("http") !== 0) { console.warn("Fusion webhook not set yet"); done(); return; }
-      btn.disabled = true; btn.textContent = "Sending…";
-      fetch(FUSION_WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(data) })
-        .then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
-        .catch(function () { btn.disabled = false; btn.textContent = "Request my cash offer"; document.getElementById("form-error").style.display = "block"; });
+      var honey = form.querySelector('[name="_honey"]');
+      function done() {
+        form.classList.add("hide");
+        document.getElementById("form-success").classList.add("show");
+      }
+      if (honey && honey.value) { done(); return; }
+      if (pageField) pageField.value = location.href;
+      var data = {};
+      new FormData(form).forEach(function (v, k) {
+        if (k !== "_honey") data[k] = v;
+      });
+      var parts = (data.name || "").trim().split(/\s+/);
+      data.first_name = parts.shift() || "";
+      data.last_name = parts.join(" ");
+      data.source = data.source || "SGRE website";
+      data.page = location.href;
+      function fail() {
+        btn.disabled = false;
+        btn.textContent = "Request my cash offer";
+        document.getElementById("form-error").style.display = "block";
+      }
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+      fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) {
+          if (!res.ok || res.j.success === false || res.j.success === "false") throw new Error("formsubmit");
+          done();
+          if (FUSION_WEBHOOK_URL && FUSION_WEBHOOK_URL.indexOf("http") === 0) {
+            fetch(FUSION_WEBHOOK_URL, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain" },
+              body: JSON.stringify(data)
+            }).catch(function () {});
+          }
+        })
+        .catch(fail);
     });
   </script>
 </body>
