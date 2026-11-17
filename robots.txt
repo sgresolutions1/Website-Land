@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sgresolutions1.github.io/Website-Land/sitemap.xml
+Sitemap: https://sgresolutions.com/sitemap.xml
