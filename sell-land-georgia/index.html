@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 <style>
     :root {
+      --land-photo: url("../img/bg-georgia.jpg");
       --bg: #0f1a14;
       --bg-soft: #16241c;
       --card: #1c2e24;
@@ -43,6 +44,7 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
+    /* Background: "Swamp at Sunset" — sunset over marshland with pines in Savannah, Georgia, United States (southeast Georgia; the closest verified south-Georgia land photo found). Pexels https://www.pexels.com/photo/swamp-at-sunset-16565840/ by Charly Louise. Pexels License (free commercial use). */
     body::before {
       content: "";
       position: fixed;
@@ -50,7 +52,7 @@
       z-index: -2;
       background:
         linear-gradient(180deg, rgba(10,18,14,.55) 0%, rgba(10,18,14,.72) 45%, rgba(10,18,14,.88) 100%),
-        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80")
+        var(--land-photo)
           center / cover no-repeat fixed;
     }
     body::after {
@@ -148,7 +150,7 @@
       position: relative; padding: 4.25rem 0 4.5rem; overflow: hidden;
       background:
         linear-gradient(105deg, rgba(10,18,14,.82) 0%, rgba(10,18,14,.58) 48%, rgba(10,18,14,.38) 100%),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80")
+        var(--land-photo)
           center 40% / cover no-repeat;
       border-bottom: 1px solid var(--line);
     }
@@ -700,6 +702,11 @@
             <li>Inland counties toward Savannah, including Bulloch, Tattnall, Toombs and Candler</li>
             <li>Wooded lots and rural land in North Georgia foothill and mountain counties when the parcel is a fit</li>
           </ul>
+          <h2>Counties we buy in</h2>
+          <p>If your land is in one of these Georgia counties, start with the county page. We still look at land in other parts of Georgia, too.</p>
+          <div class="other-areas">
+          <a href="../sell-land-ware-county-ga/">Ware County, GA</a>
+          </div>
         </div>
       </div>
     </section>
